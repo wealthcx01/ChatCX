@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MessageCircleDashed } from 'lucide-react';
+import { Ghost } from 'lucide-react'; // Updated icon import
 import { useRecoilState, useRecoilCallback } from 'recoil';
 import { TooltipAnchor } from '~/components/ui';
 import { useChatContext } from '~/Providers';
@@ -15,7 +15,7 @@ export function TemporaryChat() {
 
   const temporaryBadge = {
     id: 'temporary',
-    icon: MessageCircleDashed,
+    icon: Ghost, // Updated icon reference
     label: 'com_ui_temporary' as const,
     atom: store.isTemporary,
     isAvailable: true,
@@ -42,7 +42,7 @@ export function TemporaryChat() {
         render={
           <button
             onClick={handleBadgeToggle}
-              aria-label={localize(temporaryBadge.label)}
+            aria-label={localize(temporaryBadge.label)}
             className={cn(
               'inline-flex size-10 flex-shrink-0 items-center justify-center rounded-xl border border-border-light text-text-primary transition-all ease-in-out hover:bg-surface-tertiary',
               isTemporary
