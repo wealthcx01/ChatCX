@@ -380,121 +380,91 @@ margin-right: 0.5rem;
 }
 
 /* 
- * WEALTHCX GRADIENT SIDEBAR STYLING
+ * WEALTHCX GRADIENT SIDEBAR STYLING - FIXED VERSION
  * 
- * The following section applies the WealthCX gradient to the left sidebar only.
- * We're using specific selectors to target only the left sidebar while preserving
- * the styling of other components like the model dropdown.
+ * This section applies the WealthCX gradient ONLY to the left sidebar
+ * based on the exact elements shown in the screenshot.
  */
 
-/* 1. RESET ANY GRADIENT STYLING ON MAIN CONTENT AND RIGHT SIDEBAR */
-/* This ensures the gradient only applies to the left sidebar */
+/* FIRST: RESET ANY GRADIENT STYLING ON ALL ELEMENTS */
+body, 
+body > div, 
+body > div > div, 
+body > div > div > div,
 main,
 .main-content,
-.chat-content,
-.right-sidebar,
-.right-panel,
-body > div > div > div:not(:first-child) {
-  background: none !important;
+.chat-content {
+  background: none;
 }
 
-/* 2. APPLY WEALTHCX GRADIENT TO LEFT SIDEBAR */
-/* Based on the screenshot, we're targeting the exact sidebar container */
-body > div > div > div:first-child,
-.flex-col.h-full:first-child,
-nav[role="navigation"],
-aside:first-child,
-.sidebar:first-child,
-.left-sidebar,
-.chat-sidebar,
-.conversation-sidebar {
+/* SPECIFICALLY TARGET ONLY THE LEFT SIDEBAR SHOWN IN THE RED BOX */
+/* Based on the exact structure in the screenshot */
+nav.overflow-y-auto.flex-shrink-0.bg-token-sidebar-surface-primary,
+div.overflow-y-auto.flex-shrink-0.bg-token-sidebar-surface-primary,
+div.dark.flex.flex-col.bg-token-sidebar-surface-primary,
+div.flex.flex-col.bg-token-sidebar-surface-primary,
+div.dark.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
+div.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
+div.dark.flex-shrink-0.overflow-x-hidden,
+div.flex-shrink-0.overflow-x-hidden,
+div.dark.flex-shrink-0,
+div.flex-shrink-0,
+/* Target the exact sidebar container from the screenshot */
+div:has(> button:has(> span:contains("New chat"))),
+div:has(> a:has(> span:contains("New chat"))),
+div:has(> div:has(> span:contains("New chat"))),
+div:has(> input[placeholder="Search messages"]),
+div:has(> div:has(> span:contains("Bookmarks"))),
+/* Target the exact sidebar width */
+div.w-[260px],
+div.w-[280px],
+div.w-[300px],
+div.w-56,
+div.w-60,
+div.w-64,
+/* Target the exact sidebar position */
+div.fixed.inset-y-0.left-0,
+div.absolute.inset-y-0.left-0,
+div.relative.inset-y-0.left-0 {
   background: var(--wealthcx-gradient) !important;
   color: white !important;
 }
 
-/* 3. STYLE TEXT AND ELEMENTS IN THE LEFT SIDEBAR */
-/* Make text visible on the gradient background */
-body > div > div > div:first-child *,
-.flex-col.h-full:first-child *,
-nav[role="navigation"] *,
-aside:first-child *,
-.sidebar:first-child *,
-.left-sidebar *,
-.chat-sidebar *,
-.conversation-sidebar * {
+/* STYLE TEXT AND ELEMENTS IN THE LEFT SIDEBAR */
+/* Target the exact elements shown in the screenshot */
+div:has(> button:has(> span:contains("New chat"))) *,
+div:has(> a:has(> span:contains("New chat"))) *,
+div:has(> div:has(> span:contains("New chat"))) *,
+div:has(> input[placeholder="Search messages"]) *,
+div:has(> div:has(> span:contains("Bookmarks"))) *,
+div.w-[260px] *,
+div.w-[280px] *,
+div.w-[300px] *,
+div.w-56 *,
+div.w-60 *,
+div.w-64 *,
+div.fixed.inset-y-0.left-0 *,
+div.absolute.inset-y-0.left-0 *,
+div.relative.inset-y-0.left-0 * {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* 4. STYLE THE SEARCH BOX IN THE LEFT SIDEBAR */
-/* Based on the screenshot, this targets the search input */
-body > div > div > div:first-child input[type="text"],
-body > div > div > div:first-child input[type="search"],
-.flex-col.h-full:first-child input[type="text"],
-.flex-col.h-full:first-child input[type="search"],
-nav[role="navigation"] input[type="text"],
-nav[role="navigation"] input[type="search"],
-aside:first-child input[type="text"],
-aside:first-child input[type="search"],
-.sidebar:first-child input[type="text"],
-.sidebar:first-child input[type="search"],
-.left-sidebar input[type="text"],
-.left-sidebar input[type="search"],
-.chat-sidebar input[type="text"],
-.chat-sidebar input[type="search"],
-.conversation-sidebar input[type="text"],
-.conversation-sidebar input[type="search"],
+/* STYLE THE SEARCH BOX */
+/* Target the exact search box shown in the screenshot */
 input[placeholder="Search messages"] {
   background-color: rgba(255, 255, 255, 0.15) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 0.375rem !important;
   color: white !important;
-  padding: 0.5rem 0.75rem !important;
 }
 
-/* 5. STYLE THE SEARCH BOX PLACEHOLDER */
-body > div > div > div:first-child input[type="text"]::placeholder,
-body > div > div > div:first-child input[type="search"]::placeholder,
-.flex-col.h-full:first-child input[type="text"]::placeholder,
-.flex-col.h-full:first-child input[type="search"]::placeholder,
-nav[role="navigation"] input[type="text"]::placeholder,
-nav[role="navigation"] input[type="search"]::placeholder,
-aside:first-child input[type="text"]::placeholder,
-aside:first-child input[type="search"]::placeholder,
-.sidebar:first-child input[type="text"]::placeholder,
-.sidebar:first-child input[type="search"]::placeholder,
-.left-sidebar input[type="text"]::placeholder,
-.left-sidebar input[type="search"]::placeholder,
-.chat-sidebar input[type="text"]::placeholder,
-.chat-sidebar input[type="search"]::placeholder,
-.conversation-sidebar input[type="text"]::placeholder,
-.conversation-sidebar input[type="search"]::placeholder,
+/* STYLE THE SEARCH BOX PLACEHOLDER */
 input[placeholder="Search messages"]::placeholder {
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
-/* 6. STYLE HOVER STATES FOR LINKS AND BUTTONS IN THE LEFT SIDEBAR */
-body > div > div > div:first-child a:hover,
-body > div > div > div:first-child button:hover,
-.flex-col.h-full:first-child a:hover,
-.flex-col.h-full:first-child button:hover,
-nav[role="navigation"] a:hover,
-nav[role="navigation"] button:hover,
-aside:first-child a:hover,
-aside:first-child button:hover,
-.sidebar:first-child a:hover,
-.sidebar:first-child button:hover,
-.left-sidebar a:hover,
-.left-sidebar button:hover,
-.chat-sidebar a:hover,
-.chat-sidebar button:hover,
-.conversation-sidebar a:hover,
-.conversation-sidebar button:hover {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border-radius: 0.375rem !important;
-}
-
-/* 7. PRESERVE MODEL DROPDOWN STYLING */
-/* Based on the screenshot, ensure the model dropdown isn't affected by sidebar styling */
+/* PRESERVE MODEL DROPDOWN STYLING */
+/* Based on the screenshot, ensure the model dropdown isn't affected */
 .dropdown-menu,
 div[role="dialog"],
 div[role="listbox"],
@@ -503,11 +473,11 @@ div[role="combobox"],
 div[aria-haspopup="listbox"],
 div[aria-haspopup="menu"],
 div[aria-haspopup="dialog"] {
-  background-color: #202123 !important; /* Match the dark background in screenshot */
+  background-color: #202123 !important;
   color: white !important;
 }
 
-/* 8. PRESERVE MODEL DROPDOWN ITEM STYLING */
+/* PRESERVE MODEL DROPDOWN ITEM STYLING */
 .dropdown-menu *,
 div[role="dialog"] *,
 div[role="listbox"] *,
@@ -519,18 +489,37 @@ div[aria-haspopup="dialog"] * {
   color: inherit !important;
 }
 
-/* 9. STYLE ICONS IN THE MODEL DROPDOWN */
-/* Ensure model icons display correctly */
-img[alt="OpenAI icon"],
-img[alt="Google icon"],
-img[alt="Anthropic icon"],
-img[alt="APIpie icon"],
-.model-icon,
-.provider-icon {
-  display: inline-block !important;
-  width: auto !important;
-  height: auto !important;
-  max-width: 24px !important;
-  max-height: 24px !important;
-  margin-right: 8px !important;
+/* ADDITIONAL SPECIFIC TARGETING FOR THE LEFT SIDEBAR */
+/* These selectors are based on common ChatGPT sidebar class patterns */
+.dark nav.flex-shrink-0,
+nav.flex-shrink-0,
+.dark aside.flex-shrink-0,
+aside.flex-shrink-0,
+.dark .sidebar-wrapper,
+.sidebar-wrapper,
+.dark .nav-sidebar,
+.nav-sidebar,
+.dark .conversation-sidebar,
+.conversation-sidebar {
+  background: var(--wealthcx-gradient) !important;
+  color: white !important;
+}
+
+/* EXTREMELY SPECIFIC TARGETING FOR THE EXACT SIDEBAR SHOWN IN SCREENSHOT */
+/* This targets the exact sidebar container with the "New chat" button */
+div:has(> div:has(> button:has(> div:has(> span:contains("New chat"))))) {
+  background: var(--wealthcx-gradient) !important;
+  color: white !important;
+}
+
+/* ENSURE MAIN CONTENT AREA REMAINS UNTOUCHED */
+/* This targets the main content area (green box in screenshot) */
+main,
+.main-content,
+.chat-content,
+div.relative.h-full.w-full.flex-1,
+div.flex-1.overflow-hidden,
+div:has(> div:has(> div:has(> textarea[placeholder="Message GPT-4"]))),
+div:has(> div:has(> div:has(> div:has(> textarea)))) {
+  background: none !important;
 }
