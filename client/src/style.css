@@ -6,6 +6,10 @@
 :root {
   --white: #fff;
   --black: #000;
+  --wealthcx-red: #ff0645;
+  --wealthcx-green: #45e48f;
+  --wealthcx-yellow: #ffd000;
+  --wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF);
   --gray-20: #ececf1;
   --gray-50: #f7f7f8;
   --gray-100: #ececec;
@@ -76,11 +80,11 @@ html {
   --surface-destructive: var(--red-700);
   --surface-destructive-hover: var(--red-800);
   --surface-chat: var(--white);
-  --border-light: var(--gray-200);
-  --border-medium-alt: var(--gray-300);
-  --border-medium: var(--gray-300);
-  --border-heavy: var(--gray-400);
-  --border-xheavy: var(--gray-500);
+  --border-light: var(--wealthcx-gradient-200);
+  --border-medium-alt: var(--wealthcx-gradient-300);
+  --border-medium: var(--wealthcx-gradient-300);
+  --border-heavy: var(--wealthcx-gradient-400);
+  --border-xheavy: var(--wealthcx-gradient-500);
   /* These are test styles */
 
   --background: 0 0% 100%;
@@ -97,7 +101,7 @@ html {
   --accent-foreground: 0 0% 9%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 89.8%;
+  --border: var(--wealthcx-gradient);
   --input: 0 0% 89.8%;
   --ring: 0 0% 3.9%;
   --radius: 0.5rem;
@@ -134,11 +138,11 @@ html {
   --surface-destructive: var(--red-800);
   --surface-destructive-hover: var(--red-900);
   --surface-chat: var(--gray-700);
-  --border-light: var(--gray-700);
-  --border-medium-alt: var(--gray-600);
-  --border-medium: var(--gray-600);
-  --border-heavy: var(--gray-500);
-  --border-xheavy: var(--gray-400);
+  --border-light: var(--wealthcx-gradient-700);
+  --border-medium-alt: var(--wealthcx-gradient-600);
+  --border-medium: var(--wealthcx-gradient-600);
+  --border-heavy: var(--wealthcx-gradient-500);
+  --border-xheavy: var(--wealthcx-gradient-400);
   /* These are test styles */
 
   --background: 0 0% 7%;
@@ -155,7 +159,7 @@ html {
   --accent-foreground: 0 0% 98%;
   --destructive: 0 62.8% 40.6%;
   --destructive-foreground: 0 0% 98%;
-  --border: 0 0% 14.9%;
+  --border: var(--wealthcx-gradient);
   --input: 0 0% 14.9%;
   --ring: 0 0% 83.1%;
   --chart-1: 220 70% 50%;
