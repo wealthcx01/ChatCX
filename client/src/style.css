@@ -212,13 +212,26 @@ html {
   --border-xheavy: rgba(217, 217, 227, 0.25);
 }
 
-/* Add sidebar styling with WealthCX gradient */
+/* Apply WealthCX gradient to the left sidebar */
 .sidebar, 
 .nav-sidebar, 
 nav[role="navigation"], 
 aside, 
 .left-sidebar-container,
-[class*="sidebar"] {
+[class*="sidebar"],
+.nav-left,
+.left-nav,
+.chat-history,
+.chat-sidebar,
+.conversation-sidebar,
+.conversation-list,
+.chat-list,
+.chat-nav,
+.conversations-sidebar-container,
+.conversations-sidebar,
+.conversations-list,
+.chat-conversations-list,
+.chat-history-container {
   background: var(--wealthcx-gradient);
   color: white;
 }
@@ -932,5 +945,4 @@ aside .section-title,
   margin-right: 0.5rem;
 }
 
-/*
- Rest of the CSS remains the same */
+/* Rest of the CSS remains the same */
