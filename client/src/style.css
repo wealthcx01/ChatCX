@@ -379,78 +379,145 @@ background-color: var(--surface-hover);
 margin-right: 0.5rem;
 }
 
-/* 
- * WEALTHCX GRADIENT SIDEBAR STYLING - FIXED VERSION
- * 
- * This section applies the WealthCX gradient ONLY to the left sidebar
- * based on the exact elements shown in the screenshot.
- */
+/* SUPER AGGRESSIVE SIDEBAR TARGETING */
+/* This section uses extremely specific and aggressive selectors to target the sidebar */
 
-/* FIRST: RESET ANY GRADIENT STYLING ON ALL ELEMENTS */
-body, 
-body > div, 
-body > div > div, 
-body > div > div > div,
-main,
-.main-content,
-.chat-content {
-  background: none;
+/* Target the exact sidebar from your screenshot */
+[class*="bg-token-sidebar-surface-primary"],
+[class*="bg-black"],
+[class*="bg-gray-900"],
+[class*="bg-neutral-900"],
+[class*="dark:bg-gray-900"],
+[class*="dark:bg-black"],
+[class*="dark:bg-neutral-900"],
+.dark .bg-black,
+.dark .bg-gray-900,
+.dark .bg-neutral-900,
+.bg-black,
+.bg-gray-900,
+.bg-neutral-900,
+.dark\:bg-black,
+.dark\:bg-gray-900,
+.dark\:bg-neutral-900 {
+  background: var(--wealthcx-gradient) !important;
 }
 
-/* SPECIFICALLY TARGET ONLY THE LEFT SIDEBAR SHOWN IN THE RED BOX */
-/* Based on the exact structure in the screenshot */
-nav.overflow-y-auto.flex-shrink-0.bg-token-sidebar-surface-primary,
-div.overflow-y-auto.flex-shrink-0.bg-token-sidebar-surface-primary,
-div.dark.flex.flex-col.bg-token-sidebar-surface-primary,
-div.flex.flex-col.bg-token-sidebar-surface-primary,
-div.dark.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
-div.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
-div.dark.flex-shrink-0.overflow-x-hidden,
-div.flex-shrink-0.overflow-x-hidden,
-div.dark.flex-shrink-0,
-div.flex-shrink-0,
-/* Target the exact sidebar container from the screenshot */
+/* Target by width and position */
+.w-\[260px\],
+.w-\[280px\],
+.w-\[300px\],
+.w-56,
+.w-60,
+.w-64,
+.fixed.inset-y-0.left-0,
+.absolute.inset-y-0.left-0,
+.relative.inset-y-0.left-0 {
+  background: var(--wealthcx-gradient) !important;
+}
+
+/* Target by content */
 div:has(> button:has(> span:contains("New chat"))),
 div:has(> a:has(> span:contains("New chat"))),
 div:has(> div:has(> span:contains("New chat"))),
 div:has(> input[placeholder="Search messages"]),
-div:has(> div:has(> span:contains("Bookmarks"))),
-/* Target the exact sidebar width */
-div.w-[260px],
-div.w-[280px],
-div.w-[300px],
-div.w-56,
-div.w-60,
-div.w-64,
-/* Target the exact sidebar position */
-div.fixed.inset-y-0.left-0,
-div.absolute.inset-y-0.left-0,
-div.relative.inset-y-0.left-0 {
+div:has(> div:has(> span:contains("Bookmarks"))) {
   background: var(--wealthcx-gradient) !important;
-  color: white !important;
 }
 
-/* STYLE TEXT AND ELEMENTS IN THE LEFT SIDEBAR */
-/* Target the exact elements shown in the screenshot */
-div:has(> button:has(> span:contains("New chat"))) *,
-div:has(> a:has(> span:contains("New chat"))) *,
-div:has(> div:has(> span:contains("New chat"))) *,
-div:has(> input[placeholder="Search messages"]) *,
-div:has(> div:has(> span:contains("Bookmarks"))) *,
-div.w-[260px] *,
-div.w-[280px] *,
-div.w-[300px] *,
-div.w-56 *,
-div.w-60 *,
-div.w-64 *,
-div.fixed.inset-y-0.left-0 *,
-div.absolute.inset-y-0.left-0 *,
-div.relative.inset-y-0.left-0 * {
+/* Target by structure */
+body > div > div > div:first-child,
+body > div:first-child > div:first-child > div:first-child,
+body > div:first-child > div:first-child > div:first-child > div:first-child {
+  background: var(--wealthcx-gradient) !important;
+}
+
+/* Target by role */
+nav[role="navigation"],
+aside:first-child,
+.sidebar:first-child,
+.left-sidebar,
+.chat-sidebar,
+.chat-history,
+.conversation-sidebar,
+.conversation-list,
+.chat-list,
+.chat-nav,
+.conversations-sidebar-container,
+.conversations-sidebar,
+.conversations-list,
+.chat-conversations-list,
+.chat-history-container {
+  background: var(--wealthcx-gradient) !important;
+}
+
+/* Target by class patterns */
+.flex-shrink-0:first-child,
+.flex-col.h-full:first-child,
+.h-full.flex-col:first-child,
+.flex.flex-col.h-full:first-child,
+.flex.h-full.flex-col:first-child,
+.flex-col.h-full.w-full:first-child,
+.h-full.flex-col.w-full:first-child,
+.flex.flex-col.h-full.w-full:first-child,
+.flex.h-full.flex-col.w-full:first-child {
+  background: var(--wealthcx-gradient) !important;
+}
+
+/* Target by direct DOM path */
+body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1),
+body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1),
+body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+  background: var(--wealthcx-gradient) !important;
+}
+
+/* Style text and elements in the sidebar */
+[class*="bg-token-sidebar-surface-primary"] *,
+[class*="bg-black"] *,
+[class*="bg-gray-900"] *,
+[class*="bg-neutral-900"] *,
+[class*="dark:bg-gray-900"] *,
+[class*="dark:bg-black"] *,
+[class*="dark:bg-neutral-900"] *,
+.dark .bg-black *,
+.dark .bg-gray-900 *,
+.dark .bg-neutral-900 *,
+.bg-black *,
+.bg-gray-900 *,
+.bg-neutral-900 *,
+.dark\:bg-black *,
+.dark\:bg-gray-900 *,
+.dark\:bg-neutral-900 *,
+.w-\[260px\] *,
+.w-\[280px\] *,
+.w-\[300px\] *,
+.w-56 *,
+.w-60 *,
+.w-64 *,
+.fixed.inset-y-0.left-0 *,
+.absolute.inset-y-0.left-0 *,
+.relative.inset-y-0.left-0 *,
+body > div > div > div:first-child *,
+body > div:first-child > div:first-child > div:first-child *,
+body > div:first-child > div:first-child > div:first-child > div:first-child *,
+nav[role="navigation"] *,
+aside:first-child *,
+.sidebar:first-child *,
+.left-sidebar *,
+.chat-sidebar *,
+.chat-history *,
+.conversation-sidebar *,
+.conversation-list *,
+.chat-list *,
+.chat-nav *,
+.conversations-sidebar-container *,
+.conversations-sidebar *,
+.conversations-list *,
+.chat-conversations-list *,
+.chat-history-container * {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* STYLE THE SEARCH BOX */
-/* Target the exact search box shown in the screenshot */
+/* Style the search box */
 input[placeholder="Search messages"] {
   background-color: rgba(255, 255, 255, 0.15) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -458,9 +525,21 @@ input[placeholder="Search messages"] {
   color: white !important;
 }
 
-/* STYLE THE SEARCH BOX PLACEHOLDER */
+/* Style the search box placeholder */
 input[placeholder="Search messages"]::placeholder {
   color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* DIRECT TARGETING OF THE EXACT SIDEBAR ELEMENT */
+/* These are extremely specific selectors based on your screenshot */
+.dark.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
+.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
+.dark.flex-shrink-0.overflow-x-hidden,
+.flex-shrink-0.overflow-x-hidden,
+.dark.flex-shrink-0,
+.flex-shrink-0 {
+  background: var(--wealthcx-gradient) !important;
+  color: white !important;
 }
 
 /* PRESERVE MODEL DROPDOWN STYLING */
@@ -489,29 +568,6 @@ div[aria-haspopup="dialog"] * {
   color: inherit !important;
 }
 
-/* ADDITIONAL SPECIFIC TARGETING FOR THE LEFT SIDEBAR */
-/* These selectors are based on common ChatGPT sidebar class patterns */
-.dark nav.flex-shrink-0,
-nav.flex-shrink-0,
-.dark aside.flex-shrink-0,
-aside.flex-shrink-0,
-.dark .sidebar-wrapper,
-.sidebar-wrapper,
-.dark .nav-sidebar,
-.nav-sidebar,
-.dark .conversation-sidebar,
-.conversation-sidebar {
-  background: var(--wealthcx-gradient) !important;
-  color: white !important;
-}
-
-/* EXTREMELY SPECIFIC TARGETING FOR THE EXACT SIDEBAR SHOWN IN SCREENSHOT */
-/* This targets the exact sidebar container with the "New chat" button */
-div:has(> div:has(> button:has(> div:has(> span:contains("New chat"))))) {
-  background: var(--wealthcx-gradient) !important;
-  color: white !important;
-}
-
 /* ENSURE MAIN CONTENT AREA REMAINS UNTOUCHED */
 /* This targets the main content area (green box in screenshot) */
 main,
@@ -522,4 +578,64 @@ div.flex-1.overflow-hidden,
 div:has(> div:has(> div:has(> textarea[placeholder="Message GPT-4"]))),
 div:has(> div:has(> div:has(> div:has(> textarea)))) {
   background: none !important;
+}
+
+/* EXTREMELY SPECIFIC TARGETING FOR CHATGPT SIDEBAR */
+/* These selectors are based on common ChatGPT class patterns */
+.dark nav.flex-shrink-0,
+nav.flex-shrink-0,
+.dark aside.flex-shrink-0,
+aside.flex-shrink-0,
+.dark .sidebar-wrapper,
+.sidebar-wrapper,
+.dark .nav-sidebar,
+.nav-sidebar,
+.dark .conversation-sidebar,
+.conversation-sidebar,
+/* Target the exact element with the "New chat" button */
+div:has(> div:has(> button:has(> div:has(> span:contains("New chat"))))),
+/* Target the element with the search box */
+div:has(> div:has(> input[placeholder="Search messages"])),
+/* Target the element with the bookmarks */
+div:has(> div:has(> div:has(> span:contains("Bookmarks")))),
+/* Target the element with the conversation history */
+div:has(> div:has(> div:has(> div:has(> span:contains("Today"))))),
+/* Target the element with the user avatar at bottom */
+div:has(> div.absolute.bottom-0) {
+  background: var(--wealthcx-gradient) !important;
+  color: white !important;
+}
+
+/* DIRECT TARGETING BY ELEMENT POSITION */
+/* Target the first column in a multi-column layout */
+body > div > div > div:nth-child(1):not(:only-child),
+body > div > div:nth-child(1) > div:nth-child(1):not(:only-child),
+body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1):not(:only-child) {
+  background: var(--wealthcx-gradient) !important;
+  color: white !important;
+}
+
+/* DIRECT TARGETING BY ELEMENT ATTRIBUTES */
+/* Target elements with specific attributes that are likely to be the sidebar */
+[aria-label="Chat history"],
+[aria-label="Sidebar"],
+[aria-label="Navigation"],
+[data-testid="sidebar"],
+[data-testid="chat-sidebar"],
+[data-testid="conversation-sidebar"] {
+  background: var(--wealthcx-gradient) !important;
+  color: white !important;
+}
+
+/* DIRECT TARGETING BY ELEMENT CONTENT */
+/* Target elements that contain specific content that's likely to be in the sidebar */
+div:has(> span:contains("New chat")),
+div:has(> button:contains("New chat")),
+div:has(> a:contains("New chat")),
+div:has(> input[placeholder*="Search"]),
+div:has(> div:contains("Bookmarks")),
+div:has(> div:contains("Today")),
+div:has(> div:contains("Yesterday")) {
+  background: var(--wealthcx-gradient) !important;
+  color: white !important;
 }
