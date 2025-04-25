@@ -212,15 +212,7 @@ html {
   --border-xheavy: rgba(217, 217, 227, 0.25);
 }
 
-/* Apply WealthCX gradient to the left sidebar */
-.sidebar, 
-.nav-sidebar, 
-nav[role="navigation"], 
-aside, 
-.left-sidebar-container,
-[class*="sidebar"],
-.nav-left,
-.left-nav,
+/* Apply WealthCX gradient to the left sidebar (chat history area) */
 .chat-history,
 .chat-sidebar,
 .conversation-sidebar,
@@ -231,58 +223,744 @@ aside,
 .conversations-sidebar,
 .conversations-list,
 .chat-conversations-list,
-.chat-history-container {
+.chat-history-container,
+nav[role="navigation"] {
   background: var(--wealthcx-gradient);
   color: white;
 }
 
-/* Style sidebar items for better visibility on gradient background */
-.sidebar a, 
-.sidebar button,
-.nav-sidebar a,
-.nav-sidebar button,
+/* Style chat history items for better visibility on gradient background */
+.chat-history a, 
+.chat-history button,
+.chat-sidebar a,
+.chat-sidebar button,
+.conversation-sidebar a,
+.conversation-sidebar button,
+.conversation-list a,
+.conversation-list button,
+.chat-list a,
+.chat-list button,
+.chat-nav a,
+.chat-nav button,
+.conversations-sidebar-container a,
+.conversations-sidebar-container button,
+.conversations-sidebar a,
+.conversations-sidebar button,
+.conversations-list a,
+.conversations-list button,
+.chat-conversations-list a,
+.chat-conversations-list button,
+.chat-history-container a,
+.chat-history-container button,
 nav[role="navigation"] a,
-nav[role="navigation"] button,
-aside a,
-aside button,
-.left-sidebar-container a,
-.left-sidebar-container button,
-[class*="sidebar"] a,
-[class*="sidebar"] button {
+nav[role="navigation"] button {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Hover states for sidebar items */
-.sidebar a:hover, 
-.sidebar button:hover,
-.nav-sidebar a:hover,
-.nav-sidebar button:hover,
+/* Hover states for chat history items */
+.chat-history a:hover,
+.chat-history button:hover,
+.chat-sidebar a:hover,
+.chat-sidebar button:hover,
+.conversation-sidebar a:hover,
+.conversation-sidebar button:hover,
+.conversation-list a:hover,
+.conversation-list button:hover,
+.chat-list a:hover,
+.chat-list button:hover,
+.chat-nav a:hover,
+.chat-nav button:hover,
+.conversations-sidebar-container a:hover,
+.conversations-sidebar-container button:hover,
+.conversations-sidebar a:hover,
+.conversations-sidebar button:hover,
+.conversations-list a:hover,
+.conversations-list button:hover,
+.chat-conversations-list a:hover,
+.chat-conversations-list button:hover,
+.chat-history-container a:hover,
+.chat-history-container button:hover,
 nav[role="navigation"] a:hover,
-nav[role="navigation"] button:hover,
-aside a:hover,
-aside button:hover,
-.left-sidebar-container a:hover,
-.left-sidebar-container button:hover,
-[class*="sidebar"] a:hover,
-[class*="sidebar"] button:hover {
+nav[role="navigation"] button:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 0.375rem;
 }
 
-/* Style for the sidebar icons */
-.sidebar .icon-sm,
-.sidebar .icon-md,
-.nav-sidebar .icon-sm,
-.nav-sidebar .icon-md,
+/* Style for the chat history icons */
+.chat-history .icon-sm,
+.chat-history .icon-md,
+.chat-sidebar .icon-sm,
+.chat-sidebar .icon-md,
+.conversation-sidebar .icon-sm,
+.conversation-sidebar .icon-md,
+.conversation-list .icon-sm,
+.conversation-list .icon-md,
+.chat-list .icon-sm,
+.chat-list .icon-md,
+.chat-nav .icon-sm,
+.chat-nav .icon-md,
+.conversations-sidebar-container .icon-sm,
+.conversations-sidebar-container .icon-md,
+.conversations-sidebar .icon-sm,
+.conversations-sidebar .icon-md,
+.conversations-list .icon-sm,
+.conversations-list .icon-md,
+.chat-conversations-list .icon-sm,
+.chat-conversations-list .icon-md,
+.chat-history-container .icon-sm,
+.chat-history-container .icon-md,
 nav[role="navigation"] .icon-sm,
 nav[role="navigation"] .icon-md,
-aside .icon-sm,
-aside .icon-md,
-.left-sidebar-container .icon-sm,
-.left-sidebar-container .icon-md,
-[class*="sidebar"] .icon-sm,
-[class*="sidebar"] .icon-md {
+.chat-history svg,
+.chat-sidebar svg,
+.conversation-sidebar svg,
+.conversation-list svg,
+.chat-list svg,
+.chat-nav svg,
+nav[role="navigation"] svg {
   color: rgba(255, 255, 255, 0.9);
+}
+
+/* Improved styling for chat history inputs */
+.chat-history input[type="text"],
+.chat-history input[type="search"],
+.chat-sidebar input[type="text"],
+.chat-sidebar input[type="search"],
+.conversation-sidebar input[type="text"],
+.conversation-sidebar input[type="search"],
+.conversation-list input[type="text"],
+.conversation-list input[type="search"],
+.chat-list input[type="text"],
+.chat-list input[type="search"],
+.chat-nav input[type="text"],
+.chat-nav input[type="search"],
+nav[role="navigation"] input[type="text"],
+nav[role="navigation"] input[type="search"] {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.chat-history input[type="text"]:focus,
+.chat-history input[type="search"]:focus,
+.chat-sidebar input[type="text"]:focus,
+.chat-sidebar input[type="search"]:focus,
+.conversation-sidebar input[type="text"]:focus,
+.conversation-sidebar input[type="search"]:focus,
+.conversation-list input[type="text"]:focus,
+.conversation-list input[type="search"]:focus,
+.chat-list input[type="text"]:focus,
+.chat-list input[type="search"]:focus,
+.chat-nav input[type="text"]:focus,
+.chat-nav input[type="search"]:focus,
+nav[role="navigation"] input[type="text"]:focus,
+nav[role="navigation"] input[type="search"]:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.chat-history input[type="text"]::placeholder,
+.chat-history input[type="search"]::placeholder,
+.chat-sidebar input[type="text"]::placeholder,
+.chat-sidebar input[type="search"]::placeholder,
+.conversation-sidebar input[type="text"]::placeholder,
+.conversation-sidebar input[type="search"]::placeholder,
+.conversation-list input[type="text"]::placeholder,
+.conversation-list input[type="search"]::placeholder,
+.chat-list input[type="text"]::placeholder,
+.chat-list input[type="search"]::placeholder,
+.chat-nav input[type="text"]::placeholder,
+.chat-nav input[type="search"]::placeholder,
+nav[role="navigation"] input[type="text"]::placeholder,
+nav[role="navigation"] input[type="search"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Apply WealthCX gradient to the model selector area */
+.model-selector,
+.model-switcher,
+.model-dropdown,
+.model-buttons,
+.model-options,
+.model-toggle,
+.top-nav-buttons,
+.top-buttons,
+.nav-buttons,
+.model-nav,
+.model-tabs,
+.model-pills,
+.model-selection,
+.model-container,
+.model-controls,
+.model-header,
+.header-buttons,
+.header-controls,
+.header-actions,
+.action-buttons,
+.action-controls,
+.action-bar,
+.toolbar,
+.toolbar-buttons,
+.toolbar-controls,
+.toolbar-actions,
+.top-bar,
+.top-controls,
+.top-actions,
+.top-toolbar,
+.chat-controls,
+.chat-actions,
+.chat-toolbar,
+.chat-header-controls,
+.chat-model-selector,
+.chat-model-switcher,
+.chat-model-dropdown,
+.chat-model-buttons,
+.chat-model-options,
+.chat-model-toggle,
+.chat-top-nav-buttons,
+.chat-top-buttons,
+.chat-nav-buttons,
+.chat-model-nav,
+.chat-model-tabs,
+.chat-model-pills,
+.chat-model-selection,
+.chat-model-container,
+.chat-model-controls,
+.chat-model-header,
+.chat-header-buttons,
+.chat-header-controls,
+.chat-header-actions,
+.chat-action-buttons,
+.chat-action-controls,
+.chat-action-bar,
+.chat-toolbar,
+.chat-toolbar-buttons,
+.chat-toolbar-controls,
+.chat-toolbar-actions,
+.chat-top-bar,
+.chat-top-controls,
+.chat-top-actions,
+.chat-top-toolbar {
+background: var(--wealthcx-gradient);
+border-radius: 0.5rem;
+color: white;
+padding: 0.25rem;
+margin: 0.25rem;
+}
+
+/* Style buttons within the model selector area */
+.model-selector button,
+.model-switcher button,
+.model-dropdown button,
+.model-buttons button,
+.model-options button,
+.model-toggle button,
+.top-nav-buttons button,
+.top-buttons button,
+.nav-buttons button,
+.model-nav button,
+.model-tabs button,
+.model-pills button,
+.model-selection button,
+.model-container button,
+.model-controls button,
+.model-header button,
+.header-buttons button,
+.header-controls button,
+.header-actions button,
+.action-buttons button,
+.action-controls button,
+.action-bar button,
+.toolbar button,
+.toolbar-buttons button,
+.toolbar-controls button,
+.toolbar-actions button,
+.top-bar button,
+.top-controls button,
+.top-actions button,
+.top-toolbar button,
+.chat-controls button,
+.chat-actions button,
+.chat-toolbar button,
+.chat-header-controls button,
+.chat-model-selector button,
+.chat-model-switcher button,
+.chat-model-dropdown button,
+.chat-model-buttons button,
+.chat-model-options button,
+.chat-model-toggle button,
+.chat-top-nav-buttons button,
+.chat-top-buttons button,
+.chat-nav-buttons button,
+.chat-model-nav button,
+.chat-model-tabs button,
+.chat-model-pills button,
+.chat-model-selection button,
+.chat-model-container button,
+.chat-model-controls button,
+.chat-model-header button,
+.chat-header-buttons button,
+.chat-header-controls button,
+.chat-header-actions button,
+.chat-action-buttons button,
+.chat-action-controls button,
+.chat-action-bar button,
+.chat-toolbar button,
+.chat-toolbar-buttons button,
+.chat-toolbar-controls button,
+.chat-toolbar-actions button,
+.chat-top-bar button,
+.chat-top-controls button,
+.chat-top-actions button,
+.chat-top-toolbar button {
+background-color: rgba(255, 255, 255, 0.15);
+border: 1px solid rgba(255, 255, 255, 0.2);
+border-radius: 0.375rem;
+color: white;
+transition: all 0.2s ease;
+}
+
+/* Hover state for buttons */
+.model-selector button:hover,
+.model-switcher button:hover,
+.model-dropdown button:hover,
+.model-buttons button:hover,
+.model-options button:hover,
+.model-toggle button:hover,
+.top-nav-buttons button:hover,
+.top-buttons button:hover,
+.nav-buttons button:hover,
+.model-nav button:hover,
+.model-tabs button:hover,
+.model-pills button:hover,
+.model-selection button:hover,
+.model-container button:hover,
+.model-controls button:hover,
+.model-header button:hover,
+.header-buttons button:hover,
+.header-controls button:hover,
+.header-actions button:hover,
+.action-buttons button:hover,
+.action-controls button:hover,
+.action-bar button:hover,
+.toolbar button:hover,
+.toolbar-buttons button:hover,
+.toolbar-controls button:hover,
+.toolbar-actions button:hover,
+.top-bar button:hover,
+.top-controls button:hover,
+.top-actions button:hover,
+.top-toolbar button:hover,
+.chat-controls button:hover,
+.chat-actions button:hover,
+.chat-toolbar button:hover,
+.chat-header-controls button:hover,
+.chat-model-selector button:hover,
+.chat-model-switcher button:hover,
+.chat-model-dropdown button:hover,
+.chat-model-buttons button:hover,
+.chat-model-options button:hover,
+.chat-model-toggle button:hover,
+.chat-top-nav-buttons button:hover,
+.chat-top-buttons button:hover,
+.chat-nav-buttons button:hover,
+.chat-model-nav button:hover,
+.chat-model-tabs button:hover,
+.chat-model-pills button:hover,
+.chat-model-selection button:hover,
+.chat-model-container button:hover,
+.chat-model-controls button:hover,
+.chat-model-header button:hover,
+.chat-header-buttons button:hover,
+.chat-header-controls button:hover,
+.chat-header-actions button:hover,
+.chat-action-buttons button:hover,
+.chat-action-controls button:hover,
+.chat-action-bar button:hover,
+.chat-toolbar button:hover,
+.chat-toolbar-buttons button:hover,
+.chat-toolbar-controls button:hover,
+.chat-toolbar-actions button:hover,
+.chat-top-bar button:hover,
+.chat-top-controls button:hover,
+.chat-top-actions button:hover,
+.chat-top-toolbar button:hover {
+background-color: rgba(255, 255, 255, 0.25);
+border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Style icons within the model selector area */
+.model-selector svg,
+.model-switcher svg,
+.model-dropdown svg,
+.model-buttons svg,
+.model-options svg,
+.model-toggle svg,
+.top-nav-buttons svg,
+.top-buttons svg,
+.nav-buttons svg,
+.model-nav svg,
+.model-tabs svg,
+.model-pills svg,
+.model-selection svg,
+.model-container svg,
+.model-controls svg,
+.model-header svg,
+.header-buttons svg,
+.header-controls svg,
+.header-actions svg,
+.action-buttons svg,
+.action-controls svg,
+.action-bar svg,
+.toolbar svg,
+.toolbar-buttons svg,
+.toolbar-controls svg,
+.toolbar-actions svg,
+.top-bar svg,
+.top-controls svg,
+.top-actions svg,
+.top-toolbar svg,
+.chat-controls svg,
+.chat-actions svg,
+.chat-toolbar svg,
+.chat-header-controls svg,
+.chat-model-selector svg,
+.chat-model-switcher svg,
+.chat-model-dropdown svg,
+.chat-model-buttons svg,
+.chat-model-options svg,
+.chat-model-toggle svg,
+.chat-top-nav-buttons svg,
+.chat-top-buttons svg,
+.chat-nav-buttons svg,
+.chat-model-nav svg,
+.chat-model-tabs svg,
+.chat-model-pills svg,
+.chat-model-selection svg,
+.chat-model-container svg,
+.chat-model-controls svg,
+.chat-model-header svg,
+.chat-header-buttons svg,
+.chat-header-controls svg,
+.chat-header-actions svg,
+.chat-action-buttons svg,
+.chat-action-controls svg,
+.chat-action-bar svg,
+.chat-toolbar svg,
+.chat-toolbar-buttons svg,
+.chat-toolbar-controls svg,
+.chat-toolbar-actions svg,
+.chat-top-bar svg,
+.chat-top-controls svg,
+.chat-top-actions svg,
+.chat-top-toolbar svg {
+color: rgba(255, 255, 255, 0.9);
+}
+
+/* Style active/selected model button */
+.model-selector button.active,
+.model-switcher button.active,
+.model-dropdown button.active,
+.model-buttons button.active,
+.model-options button.active,
+.model-toggle button.active,
+.top-nav-buttons button.active,
+.top-buttons button.active,
+.nav-buttons button.active,
+.model-nav button.active,
+.model-tabs button.active,
+.model-pills button.active,
+.model-selection button.active,
+.model-container button.active,
+.model-controls button.active,
+.model-header button.active,
+.header-buttons button.active,
+.header-controls button.active,
+.header-actions button.active,
+.action-buttons button.active,
+.action-controls button.active,
+.action-bar button.active,
+.toolbar button.active,
+.toolbar-buttons button.active,
+.toolbar-controls button.active,
+.toolbar-actions button.active,
+.top-bar button.active,
+.top-controls button.active,
+.top-actions button.active,
+.top-toolbar button.active,
+.chat-controls button.active,
+.chat-actions button.active,
+.chat-toolbar button.active,
+.chat-header-controls button.active,
+.chat-model-selector button.active,
+.chat-model-switcher button.active,
+.chat-model-dropdown button.active,
+.chat-model-buttons button.active,
+.chat-model-options button.active,
+.chat-model-toggle button.active,
+.chat-top-nav-buttons button.active,
+.chat-top-buttons button.active,
+.chat-nav-buttons button.active,
+.chat-model-nav button.active,
+.chat-model-tabs button.active,
+.chat-model-pills button.active,
+.chat-model-selection button.active,
+.chat-model-container button.active,
+.chat-model-controls button.active,
+.chat-model-header button.active,
+.chat-header-buttons button.active,
+.chat-header-controls button.active,
+.chat-header-actions button.active,
+.chat-action-buttons button.active,
+.chat-action-controls button.active,
+.chat-action-bar button.active,
+.chat-toolbar button.active,
+.chat-toolbar-buttons button.active,
+.chat-toolbar-controls button.active,
+.chat-toolbar-actions button.active,
+.chat-top-bar button.active,
+.chat-top-controls button.active,
+.chat-top-actions button.active,
+.chat-top-toolbar button.active,
+.model-selector button[data-active="true"],
+.model-switcher button[data-active="true"],
+.model-dropdown button[data-active="true"],
+.model-buttons button[data-active="true"],
+.model-options button[data-active="true"],
+.model-toggle button[data-active="true"],
+.top-nav-buttons button[data-active="true"],
+.top-buttons button[data-active="true"],
+.nav-buttons button[data-active="true"],
+.model-nav button[data-active="true"],
+.model-tabs button[data-active="true"],
+.model-pills button[data-active="true"],
+.model-selection button[data-active="true"],
+.model-container button[data-active="true"],
+.model-controls button[data-active="true"],
+.model-header button[data-active="true"],
+.header-buttons button[data-active="true"],
+.header-controls button[data-active="true"],
+.header-actions button[data-active="true"],
+.action-buttons button[data-active="true"],
+.action-controls button[data-active="true"],
+.action-bar button[data-active="true"],
+.toolbar button[data-active="true"],
+.toolbar-buttons button[data-active="true"],
+.toolbar-controls button[data-active="true"],
+.toolbar-actions button[data-active="true"],
+.top-bar button[data-active="true"],
+.top-controls button[data-active="true"],
+.top-actions button[data-active="true"],
+.top-toolbar button[data-active="true"],
+.chat-controls button[data-active="true"],
+.chat-actions button[data-active="true"],
+.chat-toolbar button[data-active="true"],
+.chat-header-controls button[data-active="true"],
+.chat-model-selector button[data-active="true"],
+.chat-model-switcher button[data-active="true"],
+.chat-model-dropdown button[data-active="true"],
+.chat-model-buttons button[data-active="true"],
+.chat-model-options button[data-active="true"],
+.chat-model-toggle button[data-active="true"],
+.chat-top-nav-buttons button[data-active="true"],
+.chat-top-buttons button[data-active="true"],
+.chat-nav-buttons button[data-active="true"],
+.chat-model-nav button[data-active="true"],
+.chat-model-tabs button[data-active="true"],
+.chat-model-pills button[data-active="true"],
+.chat-model-selection button[data-active="true"],
+.chat-model-container button[data-active="true"],
+.chat-model-controls button[data-active="true"],
+.chat-model-header button[data-active="true"],
+.chat-header-buttons button[data-active="true"],
+.chat-header-controls button[data-active="true"],
+.chat-header-actions button[data-active="true"],
+.chat-action-buttons button[data-active="true"],
+.chat-action-controls button[data-active="true"],
+.chat-action-bar button[data-active="true"],
+.chat-toolbar button[data-active="true"],
+.chat-toolbar-buttons button[data-active="true"],
+.chat-toolbar-controls button[data-active="true"],
+.chat-toolbar-actions button[data-active="true"],
+.chat-top-bar button[data-active="true"],
+.chat-top-controls button[data-active="true"],
+.chat-top-actions button[data-active="true"],
+.chat-top-toolbar button[data-active="true"] {
+background-color: rgba(255, 255, 255, 0.3);
+border-color: rgba(255, 255, 255, 0.5);
+font-weight: 600;
+}
+
+/* Popup menu styling */
+.popover-ui {
+  display: flex;
+  max-height: min(var(--popover-available-height, 1700px), 1700px);
+  flex-direction: column;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-light);
+  background-color: var(--surface-primary);
+  padding: 0.5rem;
+  color: var(--text-primary);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform-origin: top;
+  opacity: 0;
+  transition-property: opacity, scale, translate;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  scale: 0.95;
+  translate: 0 -0.5rem;
+  margin-top: 4px;
+  margin-right: -2px;
+}
+
+.popover-ui:focus-visible,
+.popover-ui[data-focus-visible] {
+  outline: var(--bg-surface-hover);
+  outline-offset: -1px;
+}
+
+.popover-ui:where(.dark, .dark *) {
+  background-color: var(--surface-secondary);
+  color: var(--text-secondary);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.25),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.popover-ui[data-enter] {
+  opacity: 1;
+  scale: 1;
+  translate: 0;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  z-index: 50;
+  min-width: 8rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--surface-primary);
+  padding: 0.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .dropdown-menu {
+  background-color: var(--surface-secondary);
+  border-color: var(--border-medium);
+  color: var(--text-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu item styling */
+.select-item {
+  display: flex;
+  cursor: pointer;
+  scroll-margin: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: none !important;
+}
+
+.select-item[aria-disabled='true'] {
+  opacity: 0.5;
+}
+
+.select-item[data-active-item] {
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+/* Animation for popovers */
+.animate-popover {
+  transform-origin: top;
+  opacity: 0;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.95) translateY(-0.5rem);
+}
+
+.animate-popover[data-enter] {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.animate-popover-left {
+  transform-origin: left;
+  opacity: 0;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.95) translateX(-0.5rem);
+}
+
+.animate-popover-left[data-enter] {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+/* General menu styling for user dropdown */
+.user-dropdown-menu {
+  position: absolute;
+  z-index: 50;
+  min-width: 200px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--surface-primary);
+  padding: 0.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .user-dropdown-menu {
+  background-color: var(--surface-secondary);
+  border-color: var(--border-medium);
+  color: var(--text-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.user-dropdown-menu hr {
+  margin: 0.5rem 0;
+  border-color: var(--border-light);
+}
+
+.user-dropdown-menu a,
+.user-dropdown-menu button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.dark .user-dropdown-menu a,
+.dark .user-dropdown-menu button {
+  color: var(--text-secondary);
+}
+
+.user-dropdown-menu a:hover,
+.user-dropdown-menu button:hover {
+  background-color: var(--surface-hover);
+}
+
+.user-dropdown-menu a svg,
+.user-dropdown-menu button svg {
+  margin-right: 0.5rem;
 }
 
 /* Improved styling for sidebar panels and cards */
@@ -517,432 +1195,5 @@ aside button[type="submit"]:active,
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Improved styling for sidebar primary buttons */
-.sidebar .btn-primary,
-.nav-sidebar .btn-primary,
-aside .btn-primary,
-.left-sidebar-container .btn-primary,
-[class*="sidebar"] .btn-primary {
-  background-color: white;
-  color: #8A4FFF; /* Average of the gradient colors */
-  border: none;
-  font-weight: 600;
-}
-
-.sidebar .btn-primary:hover,
-.nav-sidebar .btn-primary:hover,
-aside .btn-primary:hover,
-.left-sidebar-container .btn-primary:hover,
-[class*="sidebar"] .btn-primary:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #7A3FEF;
-}
-
-/* Improved styling for sidebar secondary buttons */
-.sidebar .btn-secondary,
-.nav-sidebar .btn-secondary,
-aside .btn-secondary,
-.left-sidebar-container .btn-secondary,
-[class*="sidebar"] .btn-secondary {
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: white;
-}
-
-.sidebar .btn-secondary:hover,
-.nav-sidebar .btn-secondary:hover,
-aside .btn-secondary:hover,
-.left-sidebar-container .btn-secondary:hover,
-[class*="sidebar"] .btn-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.7);
-}
-
-/* Improved styling for sidebar sliders and range inputs */
-.sidebar input[type="range"],
-.nav-sidebar input[type="range"],
-aside input[type="range"],
-.left-sidebar-container input[type="range"],
-[class*="sidebar"] input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 2px;
-  outline: none;
-}
-
-.sidebar input[type="range"]::-webkit-slider-thumb,
-.nav-sidebar input[type="range"]::-webkit-slider-thumb,
-aside input[type="range"]::-webkit-slider-thumb,
-.left-sidebar-container input[type="range"]::-webkit-slider-thumb,
-[class*="sidebar"] input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 16px;
-  height: 16px;
-  background: white;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.sidebar input[type="range"]::-moz-range-thumb,
-.nav-sidebar input[type="range"]::-moz-range-thumb,
-aside input[type="range"]::-moz-range-thumb,
-.left-sidebar-container input[type="range"]::-moz-range-thumb,
-[class*="sidebar"] input[type="range"]::-moz-range-thumb {
-  width: 16px;
-  height: 16px;
-  background: white;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-/* Improved styling for sidebar checkboxes and radio buttons */
-.sidebar input[type="checkbox"],
-.sidebar input[type="radio"],
-.nav-sidebar input[type="checkbox"],
-.nav-sidebar input[type="radio"],
-aside input[type="checkbox"],
-aside input[type="radio"],
-.left-sidebar-container input[type="checkbox"],
-.left-sidebar-container input[type="radio"],
-[class*="sidebar"] input[type="checkbox"],
-[class*="sidebar"] input[type="radio"] {
-  accent-color: white;
-}
-
-/* Improved styling for sidebar toggle switches */
-.sidebar .toggle-switch,
-.nav-sidebar .toggle-switch,
-aside .toggle-switch,
-.left-sidebar-container .toggle-switch,
-[class*="sidebar"] .toggle-switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-}
-
-.sidebar .toggle-switch input,
-.nav-sidebar .toggle-switch input,
-aside .toggle-switch input,
-.left-sidebar-container .toggle-switch input,
-[class*="sidebar"] .toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.sidebar .toggle-slider,
-.nav-sidebar .toggle-slider,
-aside .toggle-slider,
-.left-sidebar-container .toggle-slider,
-[class*="sidebar"] .toggle-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: .4s;
-  border-radius: 20px;
-}
-
-.sidebar .toggle-slider:before,
-.nav-sidebar .toggle-slider:before,
-aside .toggle-slider:before,
-.left-sidebar-container .toggle-slider:before,
-[class*="sidebar"] .toggle-slider:before {
-  position: absolute;
-  content: "";
-  height: 16px;
-  width: 16px;
-  left: 2px;
-  bottom: 2px;
-  background-color: white;
-  transition: .4s;
-  border-radius: 50%;
-}
-
-.sidebar input:checked + .toggle-slider,
-.nav-sidebar input:checked + .toggle-slider,
-aside input:checked + .toggle-slider,
-.left-sidebar-container input:checked + .toggle-slider,
-[class*="sidebar"] input:checked + .toggle-slider {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.sidebar input:checked + .toggle-slider:before,
-.nav-sidebar input:checked + .toggle-slider:before,
-aside input:checked + .toggle-slider:before,
-.left-sidebar-container input:checked + .toggle-slider:before,
-[class*="sidebar"] input:checked + .toggle-slider:before {
-  transform: translateX(20px);
-}
-
-/* Improved styling for sidebar tables */
-.sidebar table,
-.nav-sidebar table,
-aside table,
-.left-sidebar-container table,
-[class*="sidebar"] table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  color: white;
-}
-
-.sidebar table th,
-.nav-sidebar table th,
-aside table th,
-.left-sidebar-container table th,
-[class*="sidebar"] table th {
-  background-color: rgba(255, 255, 255, 0.1);
-  font-weight: 600;
-  text-align: left;
-  padding: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.sidebar table td,
-.nav-sidebar table td,
-aside table td,
-.left-sidebar-container table td,
-[class*="sidebar"] table td {
-  padding: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Improved styling for sidebar dividers */
-.sidebar hr,
-.nav-sidebar hr,
-aside hr,
-.left-sidebar-container hr,
-[class*="sidebar"] hr {
-  border: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 0.75rem 0;
-}
-
-/* Improved styling for sidebar badges */
-.sidebar .badge,
-.nav-sidebar .badge,
-aside .badge,
-.left-sidebar-container .badge,
-[class*="sidebar"] .badge {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  border-radius: 9999px;
-  padding: 0.125rem 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-}
-
-/* Improved styling for active items in sidebar */
-.sidebar .active,
-.nav-sidebar .active,
-aside .active,
-.left-sidebar-container .active,
-[class*="sidebar"] .active {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 0.375rem;
-  font-weight: 600;
-}
-
-/* Improved styling for sidebar sections */
-.sidebar .section,
-.nav-sidebar .section,
-aside .section,
-.left-sidebar-container .section,
-[class*="sidebar"] .section {
-  margin-bottom: 1rem;
-}
-
-.sidebar .section-title,
-.nav-sidebar .section-title,
-aside .section-title,
-.left-sidebar-container .section-title,
-[class*="sidebar"] .section-title {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Popup menu styling */
-.popover-ui {
-  display: flex;
-  max-height: min(var(--popover-available-height, 1700px), 1700px);
-  flex-direction: column;
-  overflow: auto;
-  overscroll-behavior: contain;
-  border-radius: 1rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--border-light);
-  background-color: var(--surface-primary);
-  padding: 0.5rem;
-  color: var(--text-primary);
-  box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  transform-origin: top;
-  opacity: 0;
-  transition-property: opacity, scale, translate;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  scale: 0.95;
-  translate: 0 -0.5rem;
-  margin-top: 4px;
-  margin-right: -2px;
-}
-
-.popover-ui:focus-visible,
-.popover-ui[data-focus-visible] {
-  outline: var(--bg-surface-hover);
-  outline-offset: -1px;
-}
-
-.popover-ui:where(.dark, .dark *) {
-  background-color: var(--surface-secondary);
-  color: var(--text-secondary);
-  box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.25),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-.popover-ui[data-enter] {
-  opacity: 1;
-  scale: 1;
-  translate: 0;
-}
-
-/* Dropdown menu styling */
-.dropdown-menu {
-  position: absolute;
-  z-index: 50;
-  min-width: 8rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-light);
-  background-color: var(--surface-primary);
-  padding: 0.5rem;
-  color: var(--text-primary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-.dark .dropdown-menu {
-  background-color: var(--surface-secondary);
-  border-color: var(--border-medium);
-  color: var(--text-secondary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-/* Menu item styling */
-.select-item {
-  display: flex;
-  cursor: pointer;
-  scroll-margin: 0.5rem;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  outline: none !important;
-}
-
-.select-item[aria-disabled='true'] {
-  opacity: 0.5;
-}
-
-.select-item[data-active-item] {
-  background-color: var(--surface-hover);
-  color: var(--text-primary);
-}
-
-/* Animation for popovers */
-.animate-popover {
-  transform-origin: top;
-  opacity: 0;
-  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0.95) translateY(-0.5rem);
-}
-
-.animate-popover[data-enter] {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-.animate-popover-left {
-  transform-origin: left;
-  opacity: 0;
-  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0.95) translateX(-0.5rem);
-}
-
-.animate-popover-left[data-enter] {
-  opacity: 1;
-  transform: scale(1) translateX(0);
-}
-
-/* General menu styling for user dropdown */
-.user-dropdown-menu {
-  position: absolute;
-  z-index: 50;
-  min-width: 200px;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-light);
-  background-color: var(--surface-primary);
-  padding: 0.5rem;
-  color: var(--text-primary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-.dark .user-dropdown-menu {
-  background-color: var(--surface-secondary);
-  border-color: var(--border-medium);
-  color: var(--text-secondary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-.user-dropdown-menu hr {
-  margin: 0.5rem 0;
-  border-color: var(--border-light);
-}
-
-.user-dropdown-menu a,
-.user-dropdown-menu button {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  color: var(--text-primary);
-  text-decoration: none;
-}
-
-.dark .user-dropdown-menu a,
-.dark .user-dropdown-menu button {
-  color: var(--text-secondary);
-}
-
-.user-dropdown-menu a:hover,
-.user-dropdown-menu button:hover {
-  background-color: var(--surface-hover);
-}
-
-.user-dropdown-menu a svg,
-.user-dropdown-menu button svg {
-  margin-right: 0.5rem;
-}
-
-/* Rest of the CSS remains the same */
+/*
+ Rest of the CSS remains the same */ 
