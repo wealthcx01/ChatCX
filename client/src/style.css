@@ -4,231 +4,421 @@
 
 /* Custom Variables */
 :root {
-  --white: #fff;
-  --black: #000;
-  --wealthcx-red: #ff0645;
-  --wealthcx-green: #45e48f;
-  --wealthcx-yellow: #ffd000;
-  --wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF);
-  --wealthcx-gradient-light: linear-gradient(90deg, rgba(191, 99, 255, 0.9), rgba(71, 60, 255, 0.9));
-  --wealthcx-purple-light: rgba(191, 99, 255, 0.15);
-  --wealthcx-purple-medium: rgba(191, 99, 255, 0.25);
-  --wealthcx-purple-dark: rgba(191, 99, 255, 0.35);
-  --wealthcx-blue-light: rgba(71, 60, 255, 0.15);
-  --wealthcx-blue-medium: rgba(71, 60, 255, 0.25);
-  --wealthcx-blue-dark: rgba(71, 60, 255, 0.35);
-  /* Add missing gradient opacity variables */
-  --wealthcx-gradient-200: rgba(191, 99, 255, 0.2);
-  --wealthcx-gradient-300: rgba(191, 99, 255, 0.3);
-  --wealthcx-gradient-400: rgba(191, 99, 255, 0.4);
-  --wealthcx-gradient-500: rgba(191, 99, 255, 0.5);
-  --wealthcx-gradient-600: rgba(191, 99, 255, 0.6);
-  --wealthcx-gradient-700: rgba(191, 99, 255, 0.7);
-  --gray-20: #ececf1;
-  --gray-50: #f7f7f8;
-  --gray-100: #ececec;
-  --gray-200: #e3e3e3;
-  --gray-300: #cdcdcd;
-  --gray-400: #999696;
-  --gray-500: #595959;
-  --gray-600: #424242;
-  --gray-700: #2f2f2f;
-  --gray-800: #212121;
-  --gray-850: #171717;
-  --gray-900: #0d0d0d;
-  --green-50: #ecfdf5;
-  --green-100: #d1fae5;
-  --green-200: #a7f3d0;
-  --green-300: #6ee7b7;
-  --green-400: #34d399;
-  --green-500: #10b981;
-  --green-600: #059669;
-  --green-700: #047857;
-  --green-800: #065f46;
-  --green-900: #064e3b;
-  --green-950: #022c22;
-  --red-50: #fef2f2;
-  --red-100: #fee2e2;
-  --red-200: #fecaca;
-  --red-300: #fca5a5;
-  --red-400: #f87171;
-  --red-500: #ef4444;
-  --red-600: #dc2626;
-  --red-700: #b91c1c;
-  --red-800: #991b1b;
-  --red-900: #7f1d1d;
-  --red-950: #450a0a;
-  --gizmo-gray-500: #999;
-  --gizmo-gray-600: #666;
-  --gizmo-gray-950: #0f0f0f;
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
+ --white: #fff;
+ --black: #000;
+ --wealthcx-red: #ff0645;
+ --wealthcx-green: #45e48f;
+ --wealthcx-yellow: #ffd000;
+ --wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF);
+ --wealthcx-gradient-light: linear-gradient(90deg, rgba(191, 99, 255, 0.9), rgba(71, 60, 255, 0.9));
+ --wealthcx-purple-light: rgba(191, 99, 255, 0.15);
+ --wealthcx-purple-medium: rgba(191, 99, 255, 0.25);
+ --wealthcx-purple-dark: rgba(191, 99, 255, 0.35);
+ --wealthcx-blue-light: rgba(71, 60, 255, 0.15);
+ --wealthcx-blue-medium: rgba(71, 60, 255, 0.25);
+ --wealthcx-blue-dark: rgba(71, 60, 255, 0.35);
+ /* Add missing gradient opacity variables */
+ --wealthcx-gradient-200: rgba(191, 99, 255, 0.2);
+ --wealthcx-gradient-300: rgba(191, 99, 255, 0.3);
+ --wealthcx-gradient-400: rgba(191, 99, 255, 0.4);
+ --wealthcx-gradient-500: rgba(191, 99, 255, 0.5);
+ --wealthcx-gradient-600: rgba(191, 99, 255, 0.6);
+ --wealthcx-gradient-700: rgba(191, 99, 255, 0.7);
+ --gray-20: #ececf1;
+ --gray-50: #f7f7f8;
+ --gray-100: #ececec;
+ --gray-200: #e3e3e3;
+ --gray-300: #cdcdcd;
+ --gray-400: #999696;
+ --gray-500: #595959;
+ --gray-600: #424242;
+ --gray-700: #2f2f2f;
+ --gray-800: #212121;
+ --gray-850: #171717;
+ --gray-900: #0d0d0d;
+ --green-50: #ecfdf5;
+ --green-100: #d1fae5;
+ --green-200: #a7f3d0;
+ --green-300: #6ee7b7;
+ --green-400: #34d399;
+ --green-500: #10b981;
+ --green-600: #059669;
+ --green-700: #047857;
+ --green-800: #065f46;
+ --green-900: #064e3b;
+ --green-950: #022c22;
+ --red-50: #fef2f2;
+ --red-100: #fee2e2;
+ --red-200: #fecaca;
+ --red-300: #fca5a5;
+ --red-400: #f87171;
+ --red-500: #ef4444;
+ --red-600: #dc2626;
+ --red-700: #b91c1c;
+ --red-800: #991b1b;
+ --red-900: #7f1d1d;
+ --red-950: #450a0a;
+ --gizmo-gray-500: #999;
+ --gizmo-gray-600: #666;
+ --gizmo-gray-950: #0f0f0f;
+ --font-size-xs: 0.75rem;
+ --font-size-sm: 0.875rem;
+ --font-size-base: 1rem;
+ --font-size-lg: 1.125rem;
+ --font-size-xl: 1.25rem;
 }
 
 html {
-  --presentation: var(--white);
-  --text-primary: var(--gray-800);
-  --text-secondary: var(--gray-600);
-  --text-secondary-alt: var(--gray-500);
-  --text-tertiary: var(--gray-500);
-  --ring-primary: var(--gray-500);
-  --header-primary: var(--white);
-  --header-hover: var(--gray-50);
-  --header-button-hover: var(--gray-50);
-  --surface-active: var(--gray-100);
-  --surface-active-alt: var(--gray-200);
-  --surface-hover: var(--gray-200);
-  --surface-hover-alt: var(--gray-300);
-  --surface-primary: var(--white);
-  --surface-primary-alt: var(--gray-50);
-  --surface-primary-contrast: var(--gray-100);
-  --surface-secondary: var(--gray-50);
-  --surface-secondary-alt: var(--gray-200);
-  --surface-tertiary: var(--gray-100);
-  --surface-tertiary-alt: var(--white);
-  --surface-dialog: var(--white);
-  --surface-submit: var(--green-700);
-  --surface-submit-hover: var(--green-800);
-  --surface-destructive: var(--red-700);
-  --surface-destructive-hover: var(--red-800);
-  --surface-chat: var(--white);
-  --border-light: var(--wealthcx-gradient-200);
-  --border-medium-alt: var(--wealthcx-gradient-300);
-  --border-medium: var(--wealthcx-gradient-300);
-  --border-heavy: var(--wealthcx-gradient-400);
-  --border-xheavy: var(--wealthcx-gradient-500);
-  /* These are test styles */
+ --presentation: var(--white);
+ --text-primary: var(--gray-800);
+ --text-secondary: var(--gray-600);
+ --text-secondary-alt: var(--gray-500);
+ --text-tertiary: var(--gray-500);
+ --ring-primary: var(--gray-500);
+ --header-primary: var(--white);
+ --header-hover: var(--gray-50);
+ --header-button-hover: var(--gray-50);
+ --surface-active: var(--gray-100);
+ --surface-active-alt: var(--gray-200);
+ --surface-hover: var(--gray-200);
+ --surface-hover-alt: var(--gray-300);
+ --surface-primary: var(--white);
+ --surface-primary-alt: var(--gray-50);
+ --surface-primary-contrast: var(--gray-100);
+ --surface-secondary: var(--gray-50);
+ --surface-secondary-alt: var(--gray-200);
+ --surface-tertiary: var(--gray-100);
+ --surface-tertiary-alt: var(--white);
+ --surface-dialog: var(--white);
+ --surface-submit: var(--green-700);
+ --surface-submit-hover: var(--green-800);
+ --surface-destructive: var(--red-700);
+ --surface-destructive-hover: var(--red-800);
+ --surface-chat: var(--white);
+ --border-light: var(--wealthcx-gradient-200);
+ --border-medium-alt: var(--wealthcx-gradient-300);
+ --border-medium: var(--wealthcx-gradient-300);
+ --border-heavy: var(--wealthcx-gradient-400);
+ --border-xheavy: var(--wealthcx-gradient-500);
+ /* These are test styles */
 
-  --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 3.9%;
-  --primary: 0 0% 9%;
-  --primary-foreground: 0 0% 98%;
-  --secondary: 0 0% 96.1%;
-  --secondary-foreground: 0 0% 9%;
-  --muted: 0 0% 96.1%;
-  --muted-foreground: 0 0% 45.1%;
-  --accent: 0 0% 96.1%;
-  --accent-foreground: 0 0% 9%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --border: var(--wealthcx-gradient);
-  --input: 0 0% 89.8%;
-  --ring: 0 0% 3.9%;
-  --radius: 0.5rem;
-  --chart-1: 12 76% 61%;
-  --chart-2: 173 58% 39%;
-  --chart-3: 197 37% 24%;
-  --chart-4: 43 74% 66%;
-  --chart-5: 27 87% 67%;
-  --switch-unchecked: 0 0% 58%;
+ --background: 0 0% 100%;
+ --foreground: 0 0% 3.9%;
+ --card: 0 0% 100%;
+ --card-foreground: 0 0% 3.9%;
+ --primary: 0 0% 9%;
+ --primary-foreground: 0 0% 98%;
+ --secondary: 0 0% 96.1%;
+ --secondary-foreground: 0 0% 9%;
+ --muted: 0 0% 96.1%;
+ --muted-foreground: 0 0% 45.1%;
+ --accent: 0 0% 96.1%;
+ --accent-foreground: 0 0% 9%;
+ --destructive: 0 84.2% 60.2%;
+ --destructive-foreground: 0 0% 98%;
+ --border: var(--wealthcx-gradient);
+ --input: 0 0% 89.8%;
+ --ring: 0 0% 3.9%;
+ --radius: 0.5rem;
+ --chart-1: 12 76% 61%;
+ --chart-2: 173 58% 39%;
+ --chart-3: 197 37% 24%;
+ --chart-4: 43 74% 66%;
+ --chart-5: 27 87% 67%;
+ --switch-unchecked: 0 0% 58%;
 }
 
 .dark {
-  --presentation: var(--gray-800);
-  --text-primary: var(--gray-100);
-  --text-secondary: var(--gray-300);
-  --text-secondary-alt: var(--gray-400);
-  --text-tertiary: var(--gray-500);
-  --header-primary: var(--gray-700);
-  --header-hover: var(--gray-600);
-  --header-button-hover: var(--gray-700);
-  --surface-active: var(--gray-500);
-  --surface-active-alt: var(--gray-700);
-  --surface-hover: var(--gray-600);
-  --surface-hover-alt: var(--gray-600);
-  --surface-primary: var(--gray-900);
-  --surface-primary-alt: var(--gray-850);
-  --surface-primary-contrast: var(--gray-850);
-  --surface-secondary: var(--gray-800);
-  --surface-secondary-alt: var(--gray-800);
-  --surface-tertiary: var(--gray-700);
-  --surface-tertiary-alt: var(--gray-700);
-  --surface-dialog: var(--gray-850);
-  --surface-submit: var(--green-700);
-  --surface-submit-hover: var(--green-800);
-  --surface-destructive: var(--red-800);
-  --surface-destructive-hover: var(--red-900);
-  --surface-chat: var(--gray-700);
-  --border-light: var(--wealthcx-gradient-700);
-  --border-medium-alt: var(--wealthcx-gradient-600);
-  --border-medium: var(--wealthcx-gradient-600);
-  --border-heavy: var(--wealthcx-gradient-500);
-  --border-xheavy: var(--wealthcx-gradient-400);
-  /* These are test styles */
+ --presentation: var(--gray-800);
+ --text-primary: var(--gray-100);
+ --text-secondary: var(--gray-300);
+ --text-secondary-alt: var(--gray-400);
+ --text-tertiary: var(--gray-500);
+ --header-primary: var(--gray-700);
+ --header-hover: var(--gray-600);
+ --header-button-hover: var(--gray-700);
+ --surface-active: var(--gray-500);
+ --surface-active-alt: var(--gray-700);
+ --surface-hover: var(--gray-600);
+ --surface-hover-alt: var(--gray-600);
+ --surface-primary: var(--gray-900);
+ --surface-primary-alt: var(--gray-850);
+ --surface-primary-contrast: var(--gray-850);
+ --surface-secondary: var(--gray-800);
+ --surface-secondary-alt: var(--gray-800);
+ --surface-tertiary: var(--gray-700);
+ --surface-tertiary-alt: var(--gray-700);
+ --surface-dialog: var(--gray-850);
+ --surface-submit: var(--green-700);
+ --surface-submit-hover: var(--green-800);
+ --surface-destructive: var(--red-800);
+ --surface-destructive-hover: var(--red-900);
+ --surface-chat: var(--gray-700);
+ --border-light: var(--wealthcx-gradient-700);
+ --border-medium-alt: var(--wealthcx-gradient-600);
+ --border-medium: var(--wealthcx-gradient-600);
+ --border-heavy: var(--wealthcx-gradient-500);
+ --border-xheavy: var(--wealthcx-gradient-400);
+ /* These are test styles */
 
-  --background: 0 0% 7%;
-  --foreground: 0 0% 98%;
-  --card: 0 0% 3.9%;
-  --card-foreground: 0 0% 98%;
-  --primary: 0 0% 98%;
-  --primary-foreground: 0 0% 9%;
-  --secondary: 0 0% 14.9%;
-  --secondary-foreground: 0 0% 98%;
-  --muted: 0 0% 14.9%;
-  --muted-foreground: 0 0% 63.9%;
-  --accent: 0 0% 14.9%;
-  --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 40.6%;
-  --destructive-foreground: 0 0% 98%;
-  --border: var(--wealthcx-gradient);
-  --input: 0 0% 14.9%;
-  --ring: 0 0% 83.1%;
-  --chart-1: 220 70% 50%;
-  --chart-2: 160 60% 45%;
-  --chart-3: 30 80% 55%;
-  --chart-4: 280 65% 60%;
-  --chart-5: 340 75% 55%;
-  --switch-unchecked: 0 0% 40%;
+ --background: 0 0% 7%;
+ --foreground: 0 0% 98%;
+ --card: 0 0% 3.9%;
+ --card-foreground: 0 0% 98%;
+ --primary: 0 0% 98%;
+ --primary-foreground: 0 0% 9%;
+ --secondary: 0 0% 14.9%;
+ --secondary-foreground: 0 0% 98%;
+ --muted: 0 0% 14.9%;
+ --muted-foreground: 0 0% 63.9%;
+ --accent: 0 0% 14.9%;
+ --accent-foreground: 0 0% 98%;
+ --destructive: 0 62.8% 40.6%;
+ --destructive-foreground: 0 0% 98%;
+ --border: var(--wealthcx-gradient);
+ --input: 0 0% 14.9%;
+ --ring: 0 0% 83.1%;
+ --chart-1: 220 70% 50%;
+ --chart-2: 160 60% 45%;
+ --chart-3: 30 80% 55%;
+ --chart-4: 280 65% 60%;
+ --chart-5: 340 75% 55%;
+ --switch-unchecked: 0 0% 40%;
 }
 
 .gizmo {
-  --text-primary: var(--gizmo-gray-950);
-  --text-secondary: var(--gizmo-gray-600);
-  --text-tertiary: var(--gizmo-gray-500);
-  --surface-primary: var(--white);
-  --surface-secondary: var(--gray-50);
-  --surface-tertiary: var(--gray-100);
-  --border-light: rgba(0, 0, 0, 0.1);
-  --border-medium: rgba(0, 0, 0, 0.15);
-  --border-heavy: rgba(0, 0, 0, 0.2);
-  --border-xheavy: rgba(0, 0, 0, 0.25);
+ --text-primary: var(--gizmo-gray-950);
+ --text-secondary: var(--gizmo-gray-600);
+ --text-tertiary: var(--gizmo-gray-500);
+ --surface-primary: var(--white);
+ --surface-secondary: var(--gray-50);
+ --surface-tertiary: var(--gray-100);
+ --border-light: rgba(0, 0, 0, 0.1);
+ --border-medium: rgba(0, 0, 0, 0.15);
+ --border-heavy: rgba(0, 0, 0, 0.2);
+ --border-xheavy: rgba(0, 0, 0, 0.25);
 }
 
 .gizmo.dark {
-  --text-primary: var(--gray-100);
-  --text-secondary: var(--gray-300);
-  --text-tertiary: var(--gizmo-gray-500);
-  --surface-primary: var(--gray-900);
-  --surface-secondary: var(--gray-800);
-  --surface-tertiary: var(--gray-700);
-  --border-light: rgba(217, 217, 227, 0.1);
-  --border-medium: rgba(217, 217, 227, 0.15);
-  --border-heavy: rgba(217, 217, 227, 0.2);
-  --border-xheavy: rgba(217, 217, 227, 0.25);
+ --text-primary: var(--gray-100);
+ --text-secondary: var(--gray-300);
+ --text-tertiary: var(--gizmo-gray-500);
+ --surface-primary: var(--gray-900);
+ --surface-secondary: var(--gray-800);
+ --surface-tertiary: var(--gray-700);
+ --border-light: rgba(217, 217, 227, 0.1);
+ --border-medium: rgba(217, 217, 227, 0.15);
+ --border-heavy: rgba(217, 217, 227, 0.2);
+ --border-xheavy: rgba(217, 217, 227, 0.25);
 }
 
-/* DIRECT TARGETING OF LEFT SIDEBAR ELEMENTS BASED ON SCREENSHOT */
-/* Target the exact left sidebar container */
-body > div > div > div > div:first-child,
-body > div:first-child > div:first-child > div:first-child > div:first-child,
-body > div:first-child > div:first-child > div:first-child,
-body > div > div > div:first-child,
-body > div > div:first-child > div:first-child,
-body > div:first-child > div:first-child,
-body > div > main > div:first-child,
-body > div > main > div > div:first-child,
-body > div > div > main > div:first-child,
-body > div > div > main > div > div:first-child,
-body > div > div > div > main > div:first-child,
-body > div > div > div > main > div > div:first-child,
-nav[role="navigation"],
-aside:first-child,
-.sidebar:first-child,
+/* Popup menu styling */
+.popover-ui {
+ display: flex;
+ max-height: min(var(--popover-available-height, 1700px), 1700px);
+ flex-direction: column;
+ overflow: auto;
+ overscroll-behavior: contain;
+ border-radius: 1rem;
+ border-width: 1px;
+ border-style: solid;
+ border-color: var(--border-light);
+ background-color: var(--surface-primary);
+ padding: 0.5rem;
+ color: var(--text-primary);
+ box-shadow:
+   0 10px 15px -3px rgb(0 0 0 / 0.1),
+   0 4px 6px -4px rgb(0 0 0 / 0.1);
+ transform-origin: top;
+ opacity: 0;
+ transition-property: opacity, scale, translate;
+ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ transition-duration: 150ms;
+ scale: 0.95;
+ translate: 0 -0.5rem;
+ margin-top: 4px;
+ margin-right: -2px;
+}
+
+.popover-ui:focus-visible,
+.popover-ui[data-focus-visible] {
+ outline: var(--bg-surface-hover);
+ outline-offset: -1px;
+}
+
+.popover-ui:where(.dark, .dark *) {
+ background-color: var(--surface-secondary);
+ color: var(--text-secondary);
+ box-shadow:
+   0 10px 15px -3px rgb(0 0 0 / 0.25),
+   0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.popover-ui[data-enter] {
+ opacity: 1;
+ scale: 1;
+ translate: 0;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+ position: absolute;
+ z-index: 50;
+ min-width: 8rem;
+ overflow: hidden;
+ border-radius: 0.5rem;
+ border: 1px solid var(--border-light);
+ background-color: var(--surface-primary);
+ padding: 0.5rem;
+ color: var(--text-primary);
+ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .dropdown-menu {
+ background-color: var(--surface-secondary);
+ border-color: var(--border-medium);
+ color: var(--text-secondary);
+ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu item styling */
+.select-item {
+ display: flex;
+ cursor: pointer;
+ scroll-margin: 0.5rem;
+ align-items: center;
+ gap: 0.5rem;
+ border-radius: 0.5rem;
+ padding: 0.5rem;
+ outline: none !important;
+}
+
+.select-item[aria-disabled='true'] {
+ opacity: 0.5;
+}
+
+.select-item[data-active-item] {
+ background-color: var(--surface-hover);
+ color: var(--text-primary);
+}
+
+/* Animation for popovers */
+.animate-popover {
+ transform-origin: top;
+ opacity: 0;
+ transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+ transform: scale(0.95) translateY(-0.5rem);
+}
+
+.animate-popover[data-enter] {
+ opacity: 1;
+ transform: scale(1) translateY(0);
+}
+
+.animate-popover-left {
+ transform-origin: left;
+ opacity: 0;
+ transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+ transform: scale(0.95) translateX(-0.5rem);
+}
+
+.animate-popover-left[data-enter] {
+ opacity: 1;
+ transform: scale(1) translateX(0);
+}
+
+/* General menu styling for user dropdown */
+.user-dropdown-menu {
+ position: absolute;
+ z-index: 50;
+ min-width: 200px;
+ overflow: hidden;
+ border-radius: 0.5rem;
+ border: 1px solid var(--border-light);
+ background-color: var(--surface-primary);
+ padding: 0.5rem;
+ color: var(--text-primary);
+ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.dark .user-dropdown-menu {
+ background-color: var(--surface-secondary);
+ border-color: var(--border-medium);
+ color: var(--text-secondary);
+ box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.user-dropdown-menu hr {
+ margin: 0.5rem 0;
+ border-color: var(--border-light);
+}
+
+.user-dropdown-menu a,
+.user-dropdown-menu button {
+ display: flex;
+ width: 100%;
+ align-items: center;
+ padding: 0.5rem;
+ border-radius: 0.25rem;
+ color: var(--text-primary);
+ text-decoration: none;
+}
+
+.dark .user-dropdown-menu a,
+.dark .user-dropdown-menu button {
+ color: var(--text-secondary);
+}
+
+.user-dropdown-menu a:hover,
+.user-dropdown-menu button:hover {
+ background-color: var(--surface-hover);
+}
+
+.user-dropdown-menu a svg,
+.user-dropdown-menu button svg {
+ margin-right: 0.5rem;
+}
+
+/* 
+ * NEW SECTION: LEFT SIDEBAR GRADIENT STYLING
+ * 
+ * This section adds styles to apply the WealthCX gradient to the left sidebar only.
+ * We're using very specific selectors to target only the left sidebar elements.
+ */
+
+/* RESET ANY PREVIOUS GRADIENT STYLING ON MAIN CONTENT AND RIGHT SIDEBAR */
+main,
+.main-content,
+.chat-content,
+.right-sidebar,
+.right-panel {
+  background: none !important;
+}
+
+/* TARGET THE LEFT SIDEBAR CONTAINER */
+/* These selectors target the left sidebar container specifically */
+.flex-col.h-full:first-child,
+.h-full.flex-col:first-child,
+.flex.flex-col.h-full:first-child,
+.flex.h-full.flex-col:first-child,
+.flex-col.h-full.w-full:first-child,
+.h-full.flex-col.w-full:first-child,
+.flex.flex-col.h-full.w-full:first-child,
+.flex.h-full.flex-col.w-full:first-child,
+.dark .flex-col.h-full:first-child,
+.dark .h-full.flex-col:first-child,
+.dark .flex.flex-col.h-full:first-child,
+.dark .flex.h-full.flex-col:first-child,
+.dark .flex-col.h-full.w-full:first-child,
+.dark .h-full.flex-col.w-full:first-child,
+.dark .flex.flex-col.h-full.w-full:first-child,
+.dark .flex.h-full.flex-col.w-full:first-child,
+nav.flex-shrink-0,
+nav.w-[260px],
+aside.flex-shrink-0,
+aside.w-[260px],
+div.flex-shrink-0.w-[260px],
+div.w-[260px].flex-shrink-0,
 .left-sidebar,
 .chat-sidebar,
 .chat-history,
@@ -240,27 +430,36 @@ aside:first-child,
 .conversations-sidebar,
 .conversations-list,
 .chat-conversations-list,
-.chat-history-container {
+.chat-history-container,
+nav[role="navigation"] {
   background: var(--wealthcx-gradient) !important;
   color: white !important;
 }
 
-/* Style all elements within the left sidebar */
-body > div > div > div > div:first-child *,
-body > div:first-child > div:first-child > div:first-child > div:first-child *,
-body > div:first-child > div:first-child > div:first-child *,
-body > div > div > div:first-child *,
-body > div > div:first-child > div:first-child *,
-body > div:first-child > div:first-child *,
-body > div > main > div:first-child *,
-body > div > main > div > div:first-child *,
-body > div > div > main > div:first-child *,
-body > div > div > main > div > div:first-child *,
-body > div > div > div > main > div:first-child *,
-body > div > div > div > main > div > div:first-child *,
-nav[role="navigation"] *,
-aside:first-child *,
-.sidebar:first-child *,
+/* STYLE TEXT AND LINKS IN THE LEFT SIDEBAR */
+/* These selectors style text and links in the left sidebar */
+.flex-col.h-full:first-child *,
+.h-full.flex-col:first-child *,
+.flex.flex-col.h-full:first-child *,
+.flex.h-full.flex-col:first-child *,
+.flex-col.h-full.w-full:first-child *,
+.h-full.flex-col.w-full:first-child *,
+.flex.flex-col.h-full.w-full:first-child *,
+.flex.h-full.flex-col.w-full:first-child *,
+.dark .flex-col.h-full:first-child *,
+.dark .h-full.flex-col:first-child *,
+.dark .flex.flex-col.h-full:first-child *,
+.dark .flex.h-full.flex-col:first-child *,
+.dark .flex-col.h-full.w-full:first-child *,
+.dark .h-full.flex-col.w-full:first-child *,
+.dark .flex.flex-col.h-full.w-full:first-child *,
+.dark .flex.h-full.flex-col.w-full:first-child *,
+nav.flex-shrink-0 *,
+nav.w-[260px] *,
+aside.flex-shrink-0 *,
+aside.w-[260px] *,
+div.flex-shrink-0.w-[260px] *,
+div.w-[260px].flex-shrink-0 *,
 .left-sidebar *,
 .chat-sidebar *,
 .chat-history *,
@@ -272,41 +471,57 @@ aside:first-child *,
 .conversations-sidebar *,
 .conversations-list *,
 .chat-conversations-list *,
-.chat-history-container * {
-  color: rgba(255, 255, 255, 0.9) !important;
+.chat-history-container *,
+nav[role="navigation"] * {
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/* Style links and buttons in the left sidebar */
-body > div > div > div > div:first-child a,
-body > div > div > div > div:first-child button,
-body > div:first-child > div:first-child > div:first-child > div:first-child a,
-body > div:first-child > div:first-child > div:first-child > div:first-child button,
-body > div:first-child > div:first-child > div:first-child a,
-body > div:first-child > div:first-child > div:first-child button,
-body > div > div > div:first-child a,
-body > div > div > div:first-child button,
-body > div > div:first-child > div:first-child a,
-body > div > div:first-child > div:first-child button,
-body > div:first-child > div:first-child a,
-body > div:first-child > div:first-child button,
-body > div > main > div:first-child a,
-body > div > main > div:first-child button,
-body > div > main > div > div:first-child a,
-body > div > main > div > div:first-child button,
-body > div > div > main > div:first-child a,
-body > div > div > main > div:first-child button,
-body > div > div > main > div > div:first-child a,
-body > div > div > main > div > div:first-child button,
-body > div > div > div > main > div:first-child a,
-body > div > div > div > main > div:first-child button,
-body > div > div > div > main > div > div:first-child a,
-body > div > div > div > main > div > div:first-child button,
-nav[role="navigation"] a,
-nav[role="navigation"] button,
-aside:first-child a,
-aside:first-child button,
-.sidebar:first-child a,
-.sidebar:first-child button,
+/* STYLE LINKS AND BUTTONS IN THE LEFT SIDEBAR */
+/* These selectors style links and buttons in the left sidebar */
+.flex-col.h-full:first-child a,
+.flex-col.h-full:first-child button,
+.h-full.flex-col:first-child a,
+.h-full.flex-col:first-child button,
+.flex.flex-col.h-full:first-child a,
+.flex.flex-col.h-full:first-child button,
+.flex.h-full.flex-col:first-child a,
+.flex.h-full.flex-col:first-child button,
+.flex-col.h-full.w-full:first-child a,
+.flex-col.h-full.w-full:first-child button,
+.h-full.flex-col.w-full:first-child a,
+.h-full.flex-col.w-full:first-child button,
+.flex.flex-col.h-full.w-full:first-child a,
+.flex.flex-col.h-full.w-full:first-child button,
+.flex.h-full.flex-col.w-full:first-child a,
+.flex.h-full.flex-col.w-full:first-child button,
+.dark .flex-col.h-full:first-child a,
+.dark .flex-col.h-full:first-child button,
+.dark .h-full.flex-col:first-child a,
+.dark .h-full.flex-col:first-child button,
+.dark .flex.flex-col.h-full:first-child a,
+.dark .flex.flex-col.h-full:first-child button,
+.dark .flex.h-full.flex-col:first-child a,
+.dark .flex.h-full.flex-col:first-child button,
+.dark .flex-col.h-full.w-full:first-child a,
+.dark .flex-col.h-full.w-full:first-child button,
+.dark .h-full.flex-col.w-full:first-child a,
+.dark .h-full.flex-col.w-full:first-child button,
+.dark .flex.flex-col.h-full.w-full:first-child a,
+.dark .flex.flex-col.h-full.w-full:first-child button,
+.dark .flex.h-full.flex-col.w-full:first-child a,
+.dark .flex.h-full.flex-col.w-full:first-child button,
+nav.flex-shrink-0 a,
+nav.flex-shrink-0 button,
+nav.w-[260px] a,
+nav.w-[260px] button,
+aside.flex-shrink-0 a,
+aside.flex-shrink-0 button,
+aside.w-[260px] a,
+aside.w-[260px] button,
+div.flex-shrink-0.w-[260px] a,
+div.flex-shrink-0.w-[260px] button,
+div.w-[260px].flex-shrink-0 a,
+div.w-[260px].flex-shrink-0 button,
 .left-sidebar a,
 .left-sidebar button,
 .chat-sidebar a,
@@ -330,41 +545,58 @@ aside:first-child button,
 .chat-conversations-list a,
 .chat-conversations-list button,
 .chat-history-container a,
-.chat-history-container button {
+.chat-history-container button,
+nav[role="navigation"] a,
+nav[role="navigation"] button {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* Hover states for links and buttons in the left sidebar */
-body > div > div > div > div:first-child a:hover,
-body > div > div > div > div:first-child button:hover,
-body > div:first-child > div:first-child > div:first-child > div:first-child a:hover,
-body > div:first-child > div:first-child > div:first-child > div:first-child button:hover,
-body > div:first-child > div:first-child > div:first-child a:hover,
-body > div:first-child > div:first-child > div:first-child button:hover,
-body > div > div > div:first-child a:hover,
-body > div > div > div:first-child button:hover,
-body > div > div:first-child > div:first-child a:hover,
-body > div > div:first-child > div:first-child button:hover,
-body > div:first-child > div:first-child a:hover,
-body > div:first-child > div:first-child button:hover,
-body > div > main > div:first-child a:hover,
-body > div > main > div:first-child button:hover,
-body > div > main > div > div:first-child a:hover,
-body > div > main > div > div:first-child button:hover,
-body > div > div > main > div:first-child a:hover,
-body > div > div > main > div:first-child button:hover,
-body > div > div > main > div > div:first-child a:hover,
-body > div > div > main > div > div:first-child button:hover,
-body > div > div > div > main > div:first-child a:hover,
-body > div > div > div > main > div:first-child button:hover,
-body > div > div > div > main > div > div:first-child a:hover,
-body > div > div > div > main > div > div:first-child button:hover,
-nav[role="navigation"] a:hover,
-nav[role="navigation"] button:hover,
-aside:first-child a:hover,
-aside:first-child button:hover,
-.sidebar:first-child a:hover,
-.sidebar:first-child button:hover,
+/* HOVER STATES FOR LINKS AND BUTTONS IN THE LEFT SIDEBAR */
+/* These selectors style hover states for links and buttons in the left sidebar */
+.flex-col.h-full:first-child a:hover,
+.flex-col.h-full:first-child button:hover,
+.h-full.flex-col:first-child a:hover,
+.h-full.flex-col:first-child button:hover,
+.flex.flex-col.h-full:first-child a:hover,
+.flex.flex-col.h-full:first-child button:hover,
+.flex.h-full.flex-col:first-child a:hover,
+.flex.h-full.flex-col:first-child button:hover,
+.flex-col.h-full.w-full:first-child a:hover,
+.flex-col.h-full.w-full:first-child button:hover,
+.h-full.flex-col.w-full:first-child a:hover,
+.h-full.flex-col.w-full:first-child button:hover,
+.flex.flex-col.h-full.w-full:first-child a:hover,
+.flex.flex-col.h-full.w-full:first-child button:hover,
+.flex.h-full.flex-col.w-full:first-child a:hover,
+.flex.h-full.flex-col.w-full:first-child button:hover,
+.dark .flex-col.h-full:first-child a:hover,
+.dark .flex-col.h-full:first-child button:hover,
+.dark .h-full.flex-col:first-child a:hover,
+.dark .h-full.flex-col:first-child button:hover,
+.dark .flex.flex-col.h-full:first-child a:hover,
+.dark .flex.flex-col.h-full:first-child button:hover,
+.dark .flex.h-full.flex-col:first-child a:hover,
+.dark .flex.h-full.flex-col:first-child button:hover,
+.dark .flex-col.h-full.w-full:first-child a:hover,
+.dark .flex-col.h-full.w-full:first-child button:hover,
+.dark .h-full.flex-col.w-full:first-child a:hover,
+.dark .h-full.flex-col.w-full:first-child button:hover,
+.dark .flex.flex-col.h-full.w-full:first-child a:hover,
+.dark .flex.flex-col.h-full.w-full:first-child button:hover,
+.dark .flex.h-full.flex-col.w-full:first-child a:hover,
+.dark .flex.h-full.flex-col.w-full:first-child button:hover,
+nav.flex-shrink-0 a:hover,
+nav.flex-shrink-0 button:hover,
+nav.w-[260px] a:hover,
+nav.w-[260px] button:hover,
+aside.flex-shrink-0 a:hover,
+aside.flex-shrink-0 button:hover,
+aside.w-[260px] a:hover,
+aside.w-[260px] button:hover,
+div.flex-shrink-0.w-[260px] a:hover,
+div.flex-shrink-0.w-[260px] button:hover,
+div.w-[260px].flex-shrink-0 a:hover,
+div.w-[260px].flex-shrink-0 button:hover,
 .left-sidebar a:hover,
 .left-sidebar button:hover,
 .chat-sidebar a:hover,
@@ -388,27 +620,37 @@ aside:first-child button:hover,
 .chat-conversations-list a:hover,
 .chat-conversations-list button:hover,
 .chat-history-container a:hover,
-.chat-history-container button:hover {
+.chat-history-container button:hover,
+nav[role="navigation"] a:hover,
+nav[role="navigation"] button:hover {
   background-color: rgba(255, 255, 255, 0.15) !important;
   border-radius: 0.375rem !important;
 }
 
-/* Style icons in the left sidebar */
-body > div > div > div > div:first-child svg,
-body > div:first-child > div:first-child > div:first-child > div:first-child svg,
-body > div:first-child > div:first-child > div:first-child svg,
-body > div > div > div:first-child svg,
-body > div > div:first-child > div:first-child svg,
-body > div:first-child > div:first-child svg,
-body > div > main > div:first-child svg,
-body > div > main > div > div:first-child svg,
-body > div > div > main > div:first-child svg,
-body > div > div > main > div > div:first-child svg,
-body > div > div > div > main > div:first-child svg,
-body > div > div > div > main > div > div:first-child svg,
-nav[role="navigation"] svg,
-aside:first-child svg,
-.sidebar:first-child svg,
+/* STYLE ICONS IN THE LEFT SIDEBAR */
+/* These selectors style icons in the left sidebar */
+.flex-col.h-full:first-child svg,
+.h-full.flex-col:first-child svg,
+.flex.flex-col.h-full:first-child svg,
+.flex.h-full.flex-col:first-child svg,
+.flex-col.h-full.w-full:first-child svg,
+.h-full.flex-col.w-full:first-child svg,
+.flex.flex-col.h-full.w-full:first-child svg,
+.flex.h-full.flex-col.w-full:first-child svg,
+.dark .flex-col.h-full:first-child svg,
+.dark .h-full.flex-col:first-child svg,
+.dark .flex.flex-col.h-full:first-child svg,
+.dark .flex.h-full.flex-col:first-child svg,
+.dark .flex-col.h-full.w-full:first-child svg,
+.dark .h-full.flex-col.w-full:first-child svg,
+.dark .flex.flex-col.h-full.w-full:first-child svg,
+.dark .flex.h-full.flex-col.w-full:first-child svg,
+nav.flex-shrink-0 svg,
+nav.w-[260px] svg,
+aside.flex-shrink-0 svg,
+aside.w-[260px] svg,
+div.flex-shrink-0.w-[260px] svg,
+div.w-[260px].flex-shrink-0 svg,
 .left-sidebar svg,
 .chat-sidebar svg,
 .chat-history svg,
@@ -420,41 +662,57 @@ aside:first-child svg,
 .conversations-sidebar svg,
 .conversations-list svg,
 .chat-conversations-list svg,
-.chat-history-container svg {
+.chat-history-container svg,
+nav[role="navigation"] svg {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* Style inputs in the left sidebar */
-body > div > div > div > div:first-child input[type="text"],
-body > div > div > div > div:first-child input[type="search"],
-body > div:first-child > div:first-child > div:first-child > div:first-child input[type="text"],
-body > div:first-child > div:first-child > div:first-child > div:first-child input[type="search"],
-body > div:first-child > div:first-child > div:first-child input[type="text"],
-body > div:first-child > div:first-child > div:first-child input[type="search"],
-body > div > div > div:first-child input[type="text"],
-body > div > div > div:first-child input[type="search"],
-body > div > div:first-child > div:first-child input[type="text"],
-body > div > div:first-child > div:first-child input[type="search"],
-body > div:first-child > div:first-child input[type="text"],
-body > div:first-child > div:first-child input[type="search"],
-body > div > main > div:first-child input[type="text"],
-body > div > main > div:first-child input[type="search"],
-body > div > main > div > div:first-child input[type="text"],
-body > div > main > div > div:first-child input[type="search"],
-body > div > div > main > div:first-child input[type="text"],
-body > div > div > main > div:first-child input[type="search"],
-body > div > div > main > div > div:first-child input[type="text"],
-body > div > div > main > div > div:first-child input[type="search"],
-body > div > div > div > main > div:first-child input[type="text"],
-body > div > div > div > main > div:first-child input[type="search"],
-body > div > div > div > main > div > div:first-child input[type="text"],
-body > div > div > div > main > div > div:first-child input[type="search"],
-nav[role="navigation"] input[type="text"],
-nav[role="navigation"] input[type="search"],
-aside:first-child input[type="text"],
-aside:first-child input[type="search"],
-.sidebar:first-child input[type="text"],
-.sidebar:first-child input[type="search"],
+/* STYLE INPUTS IN THE LEFT SIDEBAR */
+/* These selectors style inputs in the left sidebar */
+.flex-col.h-full:first-child input[type="text"],
+.flex-col.h-full:first-child input[type="search"],
+.h-full.flex-col:first-child input[type="text"],
+.h-full.flex-col:first-child input[type="search"],
+.flex.flex-col.h-full:first-child input[type="text"],
+.flex.flex-col.h-full:first-child input[type="search"],
+.flex.h-full.flex-col:first-child input[type="text"],
+.flex.h-full.flex-col:first-child input[type="search"],
+.flex-col.h-full.w-full:first-child input[type="text"],
+.flex-col.h-full.w-full:first-child input[type="search"],
+.h-full.flex-col.w-full:first-child input[type="text"],
+.h-full.flex-col.w-full:first-child input[type="search"],
+.flex.flex-col.h-full.w-full:first-child input[type="text"],
+.flex.flex-col.h-full.w-full:first-child input[type="search"],
+.flex.h-full.flex-col.w-full:first-child input[type="text"],
+.flex.h-full.flex-col.w-full:first-child input[type="search"],
+.dark .flex-col.h-full:first-child input[type="text"],
+.dark .flex-col.h-full:first-child input[type="search"],
+.dark .h-full.flex-col:first-child input[type="text"],
+.dark .h-full.flex-col:first-child input[type="search"],
+.dark .flex.flex-col.h-full:first-child input[type="text"],
+.dark .flex.flex-col.h-full:first-child input[type="search"],
+.dark .flex.h-full.flex-col:first-child input[type="text"],
+.dark .flex.h-full.flex-col:first-child input[type="search"],
+.dark .flex-col.h-full.w-full:first-child input[type="text"],
+.dark .flex-col.h-full.w-full:first-child input[type="search"],
+.dark .h-full.flex-col.w-full:first-child input[type="text"],
+.dark .h-full.flex-col.w-full:first-child input[type="search"],
+.dark .flex.flex-col.h-full.w-full:first-child input[type="text"],
+.dark .flex.flex-col.h-full.w-full:first-child input[type="search"],
+.dark .flex.h-full.flex-col.w-full:first-child input[type="text"],
+.dark .flex.h-full.flex-col.w-full:first-child input[type="search"],
+nav.flex-shrink-0 input[type="text"],
+nav.flex-shrink-0 input[type="search"],
+nav.w-[260px] input[type="text"],
+nav.w-[260px] input[type="search"],
+aside.flex-shrink-0 input[type="text"],
+aside.flex-shrink-0 input[type="search"],
+aside.w-[260px] input[type="text"],
+aside.w-[260px] input[type="search"],
+div.flex-shrink-0.w-[260px] input[type="text"],
+div.flex-shrink-0.w-[260px] input[type="search"],
+div.w-[260px].flex-shrink-0 input[type="text"],
+div.w-[260px].flex-shrink-0 input[type="search"],
 .left-sidebar input[type="text"],
 .left-sidebar input[type="search"],
 .chat-sidebar input[type="text"],
@@ -478,46 +736,66 @@ aside:first-child input[type="search"],
 .chat-conversations-list input[type="text"],
 .chat-conversations-list input[type="search"],
 .chat-history-container input[type="text"],
-.chat-history-container input[type="search"] {
+.chat-history-container input[type="search"],
+nav[role="navigation"] input[type="text"],
+nav[role="navigation"] input[type="search"],
+input[placeholder="Search messages"],
+input[placeholder="Search conversations"],
+input[placeholder="Search chats"],
+input[placeholder="Search history"] {
   background-color: rgba(255, 255, 255, 0.15) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   border-radius: 0.375rem !important;
   color: white !important;
   padding: 0.5rem 0.75rem !important;
-  transition: all 0.2s ease !important;
 }
 
-/* Focus states for inputs in the left sidebar */
-body > div > div > div > div:first-child input[type="text"]:focus,
-body > div > div > div > div:first-child input[type="search"]:focus,
-body > div:first-child > div:first-child > div:first-child > div:first-child input[type="text"]:focus,
-body > div:first-child > div:first-child > div:first-child > div:first-child input[type="search"]:focus,
-body > div:first-child > div:first-child > div:first-child input[type="text"]:focus,
-body > div:first-child > div:first-child > div:first-child input[type="search"]:focus,
-body > div > div > div:first-child input[type="text"]:focus,
-body > div > div > div:first-child input[type="search"]:focus,
-body > div > div:first-child > div:first-child input[type="text"]:focus,
-body > div > div:first-child > div:first-child input[type="search"]:focus,
-body > div:first-child > div:first-child input[type="text"]:focus,
-body > div:first-child > div:first-child input[type="search"]:focus,
-body > div > main > div:first-child input[type="text"]:focus,
-body > div > main > div:first-child input[type="search"]:focus,
-body > div > main > div > div:first-child input[type="text"]:focus,
-body > div > main > div > div:first-child input[type="search"]:focus,
-body > div > div > main > div:first-child input[type="text"]:focus,
-body > div > div > main > div:first-child input[type="search"]:focus,
-body > div > div > main > div > div:first-child input[type="text"]:focus,
-body > div > div > main > div > div:first-child input[type="search"]:focus,
-body > div > div > div > main > div:first-child input[type="text"]:focus,
-body > div > div > div > main > div:first-child input[type="search"]:focus,
-body > div > div > div > main > div > div:first-child input[type="text"]:focus,
-body > div > div > div > main > div > div:first-child input[type="search"]:focus,
-nav[role="navigation"] input[type="text"]:focus,
-nav[role="navigation"] input[type="search"]:focus,
-aside:first-child input[type="text"]:focus,
-aside:first-child input[type="search"]:focus,
-.sidebar:first-child input[type="text"]:focus,
-.sidebar:first-child input[type="search"]:focus,
+/* FOCUS STATES FOR INPUTS IN THE LEFT SIDEBAR */
+/* These selectors style focus states for inputs in the left sidebar */
+.flex-col.h-full:first-child input[type="text"]:focus,
+.flex-col.h-full:first-child input[type="search"]:focus,
+.h-full.flex-col:first-child input[type="text"]:focus,
+.h-full.flex-col:first-child input[type="search"]:focus,
+.flex.flex-col.h-full:first-child input[type="text"]:focus,
+.flex.flex-col.h-full:first-child input[type="search"]:focus,
+.flex.h-full.flex-col:first-child input[type="text"]:focus,
+.flex.h-full.flex-col:first-child input[type="search"]:focus,
+.flex-col.h-full.w-full:first-child input[type="text"]:focus,
+.flex-col.h-full.w-full:first-child input[type="search"]:focus,
+.h-full.flex-col.w-full:first-child input[type="text"]:focus,
+.h-full.flex-col.w-full:first-child input[type="search"]:focus,
+.flex.flex-col.h-full.w-full:first-child input[type="text"]:focus,
+.flex.flex-col.h-full.w-full:first-child input[type="search"]:focus,
+.flex.h-full.flex-col.w-full:first-child input[type="text"]:focus,
+.flex.h-full.flex-col.w-full:first-child input[type="search"]:focus,
+.dark .flex-col.h-full:first-child input[type="text"]:focus,
+.dark .flex-col.h-full:first-child input[type="search"]:focus,
+.dark .h-full.flex-col:first-child input[type="text"]:focus,
+.dark .h-full.flex-col:first-child input[type="search"]:focus,
+.dark .flex.flex-col.h-full:first-child input[type="text"]:focus,
+.dark .flex.flex-col.h-full:first-child input[type="search"]:focus,
+.dark .flex.h-full.flex-col:first-child input[type="text"]:focus,
+.dark .flex.h-full.flex-col:first-child input[type="search"]:focus,
+.dark .flex-col.h-full.w-full:first-child input[type="text"]:focus,
+.dark .flex-col.h-full.w-full:first-child input[type="search"]:focus,
+.dark .h-full.flex-col.w-full:first-child input[type="text"]:focus,
+.dark .h-full.flex-col.w-full:first-child input[type="search"]:focus,
+.dark .flex.flex-col.h-full.w-full:first-child input[type="text"]:focus,
+.dark .flex.flex-col.h-full.w-full:first-child input[type="search"]:focus,
+.dark .flex.h-full.flex-col.w-full:first-child input[type="text"]:focus,
+.dark .flex.h-full.flex-col.w-full:first-child input[type="search"]:focus,
+nav.flex-shrink-0 input[type="text"]:focus,
+nav.flex-shrink-0 input[type="search"]:focus,
+nav.w-[260px] input[type="text"]:focus,
+nav.w-[260px] input[type="search"]:focus,
+aside.flex-shrink-0 input[type="text"]:focus,
+aside.flex-shrink-0 input[type="search"]:focus,
+aside.w-[260px] input[type="text"]:focus,
+aside.w-[260px] input[type="search"]:focus,
+div.flex-shrink-0.w-[260px] input[type="text"]:focus,
+div.flex-shrink-0.w-[260px] input[type="search"]:focus,
+div.w-[260px].flex-shrink-0 input[type="text"]:focus,
+div.w-[260px].flex-shrink-0 input[type="search"]:focus,
 .left-sidebar input[type="text"]:focus,
 .left-sidebar input[type="search"]:focus,
 .chat-sidebar input[type="text"]:focus,
@@ -541,44 +819,65 @@ aside:first-child input[type="search"]:focus,
 .chat-conversations-list input[type="text"]:focus,
 .chat-conversations-list input[type="search"]:focus,
 .chat-history-container input[type="text"]:focus,
-.chat-history-container input[type="search"]:focus {
+.chat-history-container input[type="search"]:focus,
+nav[role="navigation"] input[type="text"]:focus,
+nav[role="navigation"] input[type="search"]:focus,
+input[placeholder="Search messages"]:focus,
+input[placeholder="Search conversations"]:focus,
+input[placeholder="Search chats"]:focus,
+input[placeholder="Search history"]:focus {
   background-color: rgba(255, 255, 255, 0.25) !important;
   border-color: rgba(255, 255, 255, 0.4) !important;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
   outline: none !important;
 }
 
-/* Placeholder text for inputs in the left sidebar */
-body > div > div > div > div:first-child input[type="text"]::placeholder,
-body > div > div > div > div:first-child input[type="search"]::placeholder,
-body > div:first-child > div:first-child > div:first-child > div:first-child input[type="text"]::placeholder,
-body > div:first-child > div:first-child > div:first-child > div:first-child input[type="search"]::placeholder,
-body > div:first-child > div:first-child > div:first-child input[type="text"]::placeholder,
-body > div:first-child > div:first-child > div:first-child input[type="search"]::placeholder,
-body > div > div > div:first-child input[type="text"]::placeholder,
-body > div > div > div:first-child input[type="search"]::placeholder,
-body > div > div:first-child > div:first-child input[type="text"]::placeholder,
-body > div > div:first-child > div:first-child input[type="search"]::placeholder,
-body > div:first-child > div:first-child input[type="text"]::placeholder,
-body > div:first-child > div:first-child input[type="search"]::placeholder,
-body > div > main > div:first-child input[type="text"]::placeholder,
-body > div > main > div:first-child input[type="search"]::placeholder,
-body > div > main > div > div:first-child input[type="text"]::placeholder,
-body > div > main > div > div:first-child input[type="search"]::placeholder,
-body > div > div > main > div:first-child input[type="text"]::placeholder,
-body > div > div > main > div:first-child input[type="search"]::placeholder,
-body > div > div > main > div > div:first-child input[type="text"]::placeholder,
-body > div > div > main > div > div:first-child input[type="search"]::placeholder,
-body > div > div > div > main > div:first-child input[type="text"]::placeholder,
-body > div > div > div > main > div:first-child input[type="search"]::placeholder,
-body > div > div > div > main > div > div:first-child input[type="text"]::placeholder,
-body > div > div > div > main > div > div:first-child input[type="search"]::placeholder,
-nav[role="navigation"] input[type="text"]::placeholder,
-nav[role="navigation"] input[type="search"]::placeholder,
-aside:first-child input[type="text"]::placeholder,
-aside:first-child input[type="search"]::placeholder,
-.sidebar:first-child input[type="text"]::placeholder,
-.sidebar:first-child input[type="search"]::placeholder,
+/* PLACEHOLDER TEXT FOR INPUTS IN THE LEFT SIDEBAR */
+/* These selectors style placeholder text for inputs in the left sidebar */
+.flex-col.h-full:first-child input[type="text"]::placeholder,
+.flex-col.h-full:first-child input[type="search"]::placeholder,
+.h-full.flex-col:first-child input[type="text"]::placeholder,
+.h-full.flex-col:first-child input[type="search"]::placeholder,
+.flex.flex-col.h-full:first-child input[type="text"]::placeholder,
+.flex.flex-col.h-full:first-child input[type="search"]::placeholder,
+.flex.h-full.flex-col:first-child input[type="text"]::placeholder,
+.flex.h-full.flex-col:first-child input[type="search"]::placeholder,
+.flex-col.h-full.w-full:first-child input[type="text"]::placeholder,
+.flex-col.h-full.w-full:first-child input[type="search"]::placeholder,
+.h-full.flex-col.w-full:first-child input[type="text"]::placeholder,
+.h-full.flex-col.w-full:first-child input[type="search"]::placeholder,
+.flex.flex-col.h-full.w-full:first-child input[type="text"]::placeholder,
+.flex.flex-col.h-full.w-full:first-child input[type="search"]::placeholder,
+.flex.h-full.flex-col.w-full:first-child input[type="text"]::placeholder,
+.flex.h-full.flex-col.w-full:first-child input[type="search"]::placeholder,
+.dark .flex-col.h-full:first-child input[type="text"]::placeholder,
+.dark .flex-col.h-full:first-child input[type="search"]::placeholder,
+.dark .h-full.flex-col:first-child input[type="text"]::placeholder,
+.dark .h-full.flex-col:first-child input[type="search"]::placeholder,
+.dark .flex.flex-col.h-full:first-child input[type="text"]::placeholder,
+.dark .flex.flex-col.h-full:first-child input[type="search"]::placeholder,
+.dark .flex.h-full.flex-col:first-child input[type="text"]::placeholder,
+.dark .flex.h-full.flex-col:first-child input[type="search"]::placeholder,
+.dark .flex-col.h-full.w-full:first-child input[type="text"]::placeholder,
+.dark .flex-col.h-full.w-full:first-child input[type="search"]::placeholder,
+.dark .h-full.flex-col.w-full:first-child input[type="text"]::placeholder,
+.dark .h-full.flex-col.w-full:first-child input[type="search"]::placeholder,
+.dark .flex.flex-col.h-full.w-full:first-child input[type="text"]::placeholder,
+.dark .flex.flex-col.h-full.w-full:first-child input[type="search"]::placeholder,
+.dark .flex.h-full.flex-col.w-full:first-child input[type="text"]::placeholder,
+.dark .flex.h-full.flex-col.w-full:first-child input[type="search"]::placeholder,
+nav.flex-shrink-0 input[type="text"]::placeholder,
+nav.flex-shrink-0 input[type="search"]::placeholder,
+nav.w-[260px] input[type="text"]::placeholder,
+nav.w-[260px] input[type="search"]::placeholder,
+aside.flex-shrink-0 input[type="text"]::placeholder,
+aside.flex-shrink-0 input[type="search"]::placeholder,
+aside.w-[260px] input[type="text"]::placeholder,
+aside.w-[260px] input[type="search"]::placeholder,
+div.flex-shrink-0.w-[260px] input[type="text"]::placeholder,
+div.flex-shrink-0.w-[260px] input[type="search"]::placeholder,
+div.w-[260px].flex-shrink-0 input[type="text"]::placeholder,
+div.w-[260px].flex-shrink-0 input[type="search"]::placeholder,
 .left-sidebar input[type="text"]::placeholder,
 .left-sidebar input[type="search"]::placeholder,
 .chat-sidebar input[type="text"]::placeholder,
@@ -602,261 +901,113 @@ aside:first-child input[type="search"]::placeholder,
 .chat-conversations-list input[type="text"]::placeholder,
 .chat-conversations-list input[type="search"]::placeholder,
 .chat-history-container input[type="text"]::placeholder,
-.chat-history-container input[type="search"]::placeholder {
+.chat-history-container input[type="search"]::placeholder,
+nav[role="navigation"] input[type="text"]::placeholder,
+nav[role="navigation"] input[type="search"]::placeholder,
+input[placeholder="Search messages"]::placeholder,
+input[placeholder="Search conversations"]::placeholder,
+input[placeholder="Search chats"]::placeholder,
+input[placeholder="Search history"]::placeholder {
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
-/* SPECIFIC TARGETING FOR THE LEFT SIDEBAR SEEN IN SCREENSHOT */
-/* Target the exact sidebar element shown in the screenshot */
-.flex.flex-col.h-full,
-.flex-col.h-full,
-.h-full.flex-col,
-.h-full.flex.flex-col,
-.flex.h-full.flex-col,
-.flex.flex-col.h-full.w-full,
-.flex-col.h-full.w-full,
-.h-full.flex-col.w-full,
-.h-full.flex.flex-col.w-full,
-.flex.h-full.flex-col.w-full,
-.flex.flex-col.h-full.w-full.bg-black,
-.flex-col.h-full.w-full.bg-black,
-.h-full.flex-col.w-full.bg-black,
-.h-full.flex.flex-col.w-full.bg-black,
-.flex.h-full.flex-col.w-full.bg-black,
-.dark.flex.flex-col.h-full,
-.dark.flex-col.h-full,
-.dark.h-full.flex-col,
-.dark.h-full.flex.flex-col,
-.dark.flex.h-full.flex-col,
-.dark.flex.flex-col.h-full.w-full,
-.dark.flex-col.h-full.w-full,
-.dark.h-full.flex-col.w-full,
-.dark.h-full.flex.flex-col.w-full,
-.dark.flex.h-full.flex-col.w-full,
-.dark.flex.flex-col.h-full.w-full.bg-black,
-.dark.flex-col.h-full.w-full.bg-black,
-.dark.h-full.flex-col.w-full.bg-black,
-.dark.h-full.flex.flex-col.w-full.bg-black,
-.dark.flex.h-full.flex-col.w-full.bg-black {
-  background: var(--wealthcx-gradient) !important;
+/* PRESERVE MODEL DROPDOWN STYLING */
+/* These selectors reset any styling on the model dropdown */
+.dropdown-menu,
+.model-dropdown,
+.model-selector,
+div[role="dialog"],
+div[role="listbox"],
+div[role="menu"],
+div[role="combobox"],
+div[aria-haspopup="listbox"],
+div[aria-haspopup="menu"],
+div[aria-haspopup="dialog"] {
+  background-color: var(--surface-primary) !important;
+  color: var(--text-primary) !important;
 }
 
-/* Target the search box in the left sidebar */
-input[placeholder="Search messages"],
-input[placeholder="Search conversations"],
-input[placeholder="Search chats"],
-input[placeholder="Search history"] {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
+/* Reset styling for model dropdown items */
+.dropdown-menu *,
+.model-dropdown *,
+.model-selector *,
+div[role="dialog"] *,
+div[role="listbox"] *,
+div[role="menu"] *,
+div[role="combobox"] *,
+div[aria-haspopup="listbox"] *,
+div[aria-haspopup="menu"] *,
+div[aria-haspopup="dialog"] * {
+  color: inherit !important;
 }
 
-/* Target the bookmarks section */
-a:has(svg[data-icon="bookmark"]),
-button:has(svg[data-icon="bookmark"]),
-a:has(svg.bookmark-icon),
-button:has(svg.bookmark-icon),
-a:has(svg[class*="bookmark"]),
-button:has(svg[class*="bookmark"]) {
-  color: rgba(255, 255, 255, 0.9) !important;
+/* Reset styling for model dropdown icons */
+.dropdown-menu img,
+.model-dropdown img,
+.model-selector img,
+div[role="dialog"] img,
+div[role="listbox"] img,
+div[role="menu"] img,
+div[role="combobox"] img,
+div[aria-haspopup="listbox"] img,
+div[aria-haspopup="menu"] img,
+div[aria-haspopup="dialog"] img,
+.dropdown-menu svg,
+.model-dropdown svg,
+.model-selector svg,
+div[role="dialog"] svg,
+div[role="listbox"] svg,
+div[role="menu"] svg,
+div[role="combobox"] svg,
+div[aria-haspopup="listbox"] svg,
+div[aria-haspopup="menu"] svg,
+div[aria-haspopup="dialog"] svg {
+  color: inherit !important;
 }
 
-/* Target the conversation history items */
-.flex.items-center.gap-3,
-.items-center.gap-3,
-.flex.gap-3.items-center,
-.gap-3.items-center,
-.flex.items-center.gap-3.rounded-lg,
-.items-center.gap-3.rounded-lg,
-.flex.gap-3.items-center.rounded-lg,
-.gap-3.items-center.rounded-lg {
-  color: rgba(255, 255, 255, 0.9) !important;
+/* Dark mode adjustments for model dropdown */
+.dark .dropdown-menu,
+.dark .model-dropdown,
+.dark .model-selector,
+.dark div[role="dialog"],
+.dark div[role="listbox"],
+.dark div[role="menu"],
+.dark div[role="combobox"],
+.dark div[aria-haspopup="listbox"],
+.dark div[aria-haspopup="menu"],
+.dark div[aria-haspopup="dialog"] {
+  background-color: var(--surface-secondary) !important;
+  color: var(--text-secondary) !important;
 }
 
-/* Target the conversation history items on hover */
-.flex.items-center.gap-3:hover,
-.items-center.gap-3:hover,
-.flex.gap-3.items-center:hover,
-.gap-3.items-center:hover,
-.flex.items-center.gap-3.rounded-lg:hover,
-.items-center.gap-3.rounded-lg:hover,
-.flex.gap-3.items-center.rounded-lg:hover,
-.gap-3.items-center.rounded-lg:hover {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border-radius: 0.375rem !important;
+/* SPECIFIC FIXES FOR THE MODEL DROPDOWN */
+/* Fix for the APIpie icon and other model icons */
+img[alt="APIpie icon"],
+img[alt="OpenAI icon"],
+img[alt="Google icon"],
+img[alt="Anthropic icon"],
+img[alt="Plugin icon"],
+.model-icon,
+.provider-icon {
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  margin-right: 8px !important;
 }
 
-/* Target the "New chat" button */
-a:has(span:contains("New chat")),
-button:has(span:contains("New chat")),
-a:has(div:contains("New chat")),
-button:has(div:contains("New chat")) {
-  color: rgba(255, 255, 255, 0.9) !important;
+/* Fix for model dropdown text */
+.model-dropdown span,
+.model-selector span,
+div[role="option"] span,
+div[role="menuitem"] span {
+  color: var(--text-primary) !important;
 }
 
-/* Popup menu styling */
-.popover-ui {
-  display: flex;
-  max-height: min(var(--popover-available-height, 1700px), 1700px);
-  flex-direction: column;
-  overflow: auto;
-  overscroll-behavior: contain;
-  border-radius: 1rem;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--border-light);
-  background-color: var(--surface-primary);
-  padding: 0.5rem;
-  color: var(--text-primary);
-  box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-  transform-origin: top;
-  opacity: 0;
-  transition-property: opacity, scale, translate;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  scale: 0.95;
-  translate: 0 -0.5rem;
-  margin-top: 4px;
-  margin-right: -2px;
-}
-
-.popover-ui:focus-visible,
-.popover-ui[data-focus-visible] {
-  outline: var(--bg-surface-hover);
-  outline-offset: -1px;
-}
-
-.popover-ui:where(.dark, .dark *) {
-  background-color: var(--surface-secondary);
-  color: var(--text-secondary);
-  box-shadow:
-    0 10px 15px -3px rgb(0 0 0 / 0.25),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
-}
-
-.popover-ui[data-enter] {
-  opacity: 1;
-  scale: 1;
-  translate: 0;
-}
-
-/* Dropdown menu styling */
-.dropdown-menu {
-  position: absolute;
-  z-index: 50;
-  min-width: 8rem;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-light);
-  background-color: var(--surface-primary);
-  padding: 0.5rem;
-  color: var(--text-primary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-.dark .dropdown-menu {
-  background-color: var(--surface-secondary);
-  border-color: var(--border-medium);
-  color: var(--text-secondary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-/* Menu item styling */
-.select-item {
-  display: flex;
-  cursor: pointer;
-  scroll-margin: 0.5rem;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  outline: none !important;
-}
-
-.select-item[aria-disabled='true'] {
-  opacity: 0.5;
-}
-
-.select-item[data-active-item] {
-  background-color: var(--surface-hover);
-  color: var(--text-primary);
-}
-
-/* Animation for popovers */
-.animate-popover {
-  transform-origin: top;
-  opacity: 0;
-  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0.95) translateY(-0.5rem);
-}
-
-.animate-popover[data-enter] {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-.animate-popover-left {
-  transform-origin: left;
-  opacity: 0;
-  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scale(0.95) translateX(-0.5rem);
-}
-
-.animate-popover-left[data-enter] {
-  opacity: 1;
-  transform: scale(1) translateX(0);
-}
-
-/* General menu styling for user dropdown */
-.user-dropdown-menu {
-  position: absolute;
-  z-index: 50;
-  min-width: 200px;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  border: 1px solid var(--border-light);
-  background-color: var(--surface-primary);
-  padding: 0.5rem;
-  color: var(--text-primary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-.dark .user-dropdown-menu {
-  background-color: var(--surface-secondary);
-  border-color: var(--border-medium);
-  color: var(--text-secondary);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-}
-
-.user-dropdown-menu hr {
-  margin: 0.5rem 0;
-  border-color: var(--border-light);
-}
-
-.user-dropdown-menu a,
-.user-dropdown-menu button {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  color: var(--text-primary);
-  text-decoration: none;
-}
-
-.dark .user-dropdown-menu a,
-.dark .user-dropdown-menu button {
-  color: var(--text-secondary);
-}
-
-.user-dropdown-menu a:hover,
-.user-dropdown-menu button:hover {
-  background-color: var(--surface-hover);
-}
-
-.user-dropdown-menu a svg,
-.user-dropdown-menu button svg {
-  margin-right: 0.5rem;
+.dark .model-dropdown span,
+.dark .model-selector span,
+.dark div[role="option"] span,
+.dark div[role="menuitem"] span {
+  color: var(--text-secondary) !important;
 }
