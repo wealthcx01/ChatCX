@@ -10,6 +10,13 @@
   --wealthcx-green: #45e48f;
   --wealthcx-yellow: #ffd000;
   --wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF);
+  /* Add missing gradient opacity variables */
+  --wealthcx-gradient-200: rgba(191, 99, 255, 0.2);
+  --wealthcx-gradient-300: rgba(191, 99, 255, 0.3);
+  --wealthcx-gradient-400: rgba(191, 99, 255, 0.4);
+  --wealthcx-gradient-500: rgba(191, 99, 255, 0.5);
+  --wealthcx-gradient-600: rgba(191, 99, 255, 0.6);
+  --wealthcx-gradient-700: rgba(191, 99, 255, 0.7);
   --gray-20: #ececf1;
   --gray-50: #f7f7f8;
   --gray-100: #ececec;
@@ -192,6 +199,87 @@ html {
   --border-medium: rgba(217, 217, 227, 0.15);
   --border-heavy: rgba(217, 217, 227, 0.2);
   --border-xheavy: rgba(217, 217, 227, 0.25);
+}
+
+/* Add sidebar styling with WealthCX gradient */
+.nav-sidebar, 
+[class*="sidebar"], 
+nav[role="navigation"], 
+aside, 
+.left-sidebar-container {
+  background: var(--wealthcx-gradient);
+  color: white;
+}
+
+/* Style sidebar items for better visibility on gradient background */
+.nav-sidebar a, 
+.nav-sidebar button,
+[class*="sidebar"] a,
+[class*="sidebar"] button,
+nav[role="navigation"] a,
+nav[role="navigation"] button,
+aside a,
+aside button,
+.left-sidebar-container a,
+.left-sidebar-container button {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hover states for sidebar items */
+.nav-sidebar a:hover, 
+.nav-sidebar button:hover,
+[class*="sidebar"] a:hover,
+[class*="sidebar"] button:hover,
+nav[role="navigation"] a:hover,
+nav[role="navigation"] button:hover,
+aside a:hover,
+aside button:hover,
+.left-sidebar-container a:hover,
+.left-sidebar-container button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Style for the sidebar icons */
+.nav-sidebar .icon-sm,
+.nav-sidebar .icon-md,
+[class*="sidebar"] .icon-sm,
+[class*="sidebar"] .icon-md,
+nav[role="navigation"] .icon-sm,
+nav[role="navigation"] .icon-md,
+aside .icon-sm,
+aside .icon-md,
+.left-sidebar-container .icon-sm,
+.left-sidebar-container .icon-md {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Adjust the search box in sidebar */
+.nav-sidebar input[type="text"],
+.nav-sidebar .form-input,
+[class*="sidebar"] input[type="text"],
+[class*="sidebar"] .form-input,
+nav[role="navigation"] input[type="text"],
+nav[role="navigation"] .form-input,
+aside input[type="text"],
+aside .form-input,
+.left-sidebar-container input[type="text"],
+.left-sidebar-container .form-input {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.nav-sidebar input[type="text"]::placeholder,
+.nav-sidebar .form-input::placeholder,
+[class*="sidebar"] input[type="text"]::placeholder,
+[class*="sidebar"] .form-input::placeholder,
+nav[role="navigation"] input[type="text"]::placeholder,
+nav[role="navigation"] .form-input::placeholder,
+aside input[type="text"]::placeholder,
+aside .form-input::placeholder,
+.left-sidebar-container input[type="text"]::placeholder,
+.left-sidebar-container .form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .text-token-text-primary {
@@ -385,14 +473,10 @@ If you have purchased a license, you can use the commented-out `@font-face` decl
 Step 1: Buy whatever license applies to you and allows use of `.woff2` font files (likely web font license).
 Step 2: Place them in ./client/public/fonts/ directory.
 Step 3: Replace the current `fontFamily` config in ./client/tailwind.config.cjs with the following:
-
-```
-    fontFamily: {
-      sans: ['Söhne', 'sans-serif'],
-      mono: ['Söhne Mono', 'monospace'],
-    },
-```
-
+fontFamily: {
+  sans: ['Söhne', 'sans-serif'],
+  mono: ['Söhne Mono', 'monospace'],
+},
 Step 4: Uncomment all Söhne font-face declarations below.
 Step 5: rebuild frontend code: `npm run frontend` (or rebuild docker).
 
@@ -707,6 +791,9 @@ pre {
 
 .dark .premium-scroll-button {
   box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255,  
     0 2px 8px rgba(0, 0, 0, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.25),
     0 0 0 1px rgba(255, 255, 255, 0.06);
