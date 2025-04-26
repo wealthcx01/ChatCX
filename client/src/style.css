@@ -4,638 +4,932 @@
 
 /* Custom Variables */
 :root {
---white: #fff;
---black: #000;
---wealthcx-red: #ff0645;
---wealthcx-green: #45e48f;
---wealthcx-yellow: #ffd000;
---wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF);
---wealthcx-gradient-light: linear-gradient(90deg, rgba(191, 99, 255, 0.9), rgba(71, 60, 255, 0.9));
---wealthcx-purple-light: rgba(191, 99, 255, 0.15);
---wealthcx-purple-medium: rgba(191, 99, 255, 0.25);
---wealthcx-purple-dark: rgba(191, 99, 255, 0.35);
---wealthcx-blue-light: rgba(71, 60, 255, 0.15);
---wealthcx-blue-medium: rgba(71, 60, 255, 0.25);
---wealthcx-blue-dark: rgba(71, 60, 255, 0.35);
-/* Add missing gradient opacity variables */
---wealthcx-gradient-200: rgba(191, 99, 255, 0.2);
---wealthcx-gradient-300: rgba(191, 99, 255, 0.3);
---wealthcx-gradient-400: rgba(191, 99, 255, 0.4);
---wealthcx-gradient-500: rgba(191, 99, 255, 0.5);
---wealthcx-gradient-600: rgba(191, 99, 255, 0.6);
---wealthcx-gradient-700: rgba(191, 99, 255, 0.7);
---gray-20: #ececf1;
---gray-50: #f7f7f8;
---gray-100: #ececec;
---gray-200: #e3e3e3;
---gray-300: #cdcdcd;
---gray-400: #999696;
---gray-500: #595959;
---gray-600: #424242;
---gray-700: #2f2f2f;
---gray-800: #212121;
---gray-850: #171717;
---gray-900: #0d0d0d;
---green-50: #ecfdf5;
---green-100: #d1fae5;
---green-200: #a7f3d0;
---green-300: #6ee7b7;
---green-400: #34d399;
---green-500: #10b981;
---green-600: #059669;
---green-700: #047857;
---green-800: #065f46;
---green-900: #064e3b;
---green-950: #022c22;
---red-50: #fef2f2;
---red-100: #fee2e2;
---red-200: #fecaca;
---red-300: #fca5a5;
---red-400: #f87171;
---red-500: #ef4444;
---red-600: #dc2626;
---red-700: #b91c1c;
---red-800: #991b1b;
---red-900: #7f1d1d;
---red-950: #450a0a;
---gizmo-gray-500: #999;
---gizmo-gray-600: #666;
---gizmo-gray-950: #0f0f0f;
---font-size-xs: 0.75rem;
---font-size-sm: 0.875rem;
---font-size-base: 1rem;
---font-size-lg: 1.125rem;
---font-size-xl: 1.25rem;
+  --white: #fff;
+  --black: #000;
+  --wealthcx-red: #ff0645;
+  --wealthcx-green: #45e48f;
+  --wealthcx-yellow: #ffd000;
+  --wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF);
+  --wealthcx-gradient-light: linear-gradient(90deg, rgba(191, 99, 255, 0.9), rgba(71, 60, 255, 0.9));
+  --wealthcx-purple-light: rgba(191, 99, 255, 0.15);
+  --wealthcx-purple-medium: rgba(191, 99, 255, 0.25);
+  --wealthcx-purple-dark: rgba(191, 99, 255, 0.35);
+  --wealthcx-blue-light: rgba(71, 60, 255, 0.15);
+  --wealthcx-blue-medium: rgba(71, 60, 255, 0.25);
+  --wealthcx-blue-dark: rgba(71, 60, 255, 0.35);
+  /* Add missing gradient opacity variables */
+  --wealthcx-gradient-200: rgba(191, 99, 255, 0.2);
+  --wealthcx-gradient-300: rgba(191, 99, 255, 0.3);
+  --wealthcx-gradient-400: rgba(191, 99, 255, 0.4);
+  --wealthcx-gradient-500: rgba(191, 99, 255, 0.5);
+  --wealthcx-gradient-600: rgba(191, 99, 255, 0.6);
+  --wealthcx-gradient-700: rgba(191, 99, 255, 0.7);
+  --gray-20: #ececf1;
+  --gray-50: #f7f7f8;
+  --gray-100: #ececec;
+  --gray-200: #e3e3e3;
+  --gray-300: #cdcdcd;
+  --gray-400: #999696;
+  --gray-500: #595959;
+  --gray-600: #424242;
+  --gray-700: #2f2f2f;
+  --gray-800: #212121;
+  --gray-850: #171717;
+  --gray-900: #0d0d0d;
+  --green-50: #ecfdf5;
+  --green-100: #d1fae5;
+  --green-200: #a7f3d0;
+  --green-300: #6ee7b7;
+  --green-400: #34d399;
+  --green-500: #10b981;
+  --green-600: #059669;
+  --green-700: #047857;
+  --green-800: #065f46;
+  --green-900: #064e3b;
+  --green-950: #022c22;
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+  --red-800: #991b1b;
+  --red-900: #7f1d1d;
+  --red-950: #450a0a;
+  --gizmo-gray-500: #999;
+  --gizmo-gray-600: #666;
+  --gizmo-gray-950: #0f0f0f;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
 }
 
 html {
---presentation: var(--white);
---text-primary: var(--gray-800);
---text-secondary: var(--gray-600);
---text-secondary-alt: var(--gray-500);
---text-tertiary: var(--gray-500);
---ring-primary: var(--gray-500);
---header-primary: var(--white);
---header-hover: var(--gray-50);
---header-button-hover: var(--gray-50);
---surface-active: var(--gray-100);
---surface-active-alt: var(--gray-200);
---surface-hover: var(--gray-200);
---surface-hover-alt: var(--gray-300);
---surface-primary: var(--white);
---surface-primary-alt: var(--gray-50);
---surface-primary-contrast: var(--gray-100);
---surface-secondary: var(--gray-50);
---surface-secondary-alt: var(--gray-200);
---surface-tertiary: var(--gray-100);
---surface-tertiary-alt: var(--white);
---surface-dialog: var(--white);
---surface-submit: var(--green-700);
---surface-submit-hover: var(--green-800);
---surface-destructive: var(--red-700);
---surface-destructive-hover: var(--red-800);
---surface-chat: var(--white);
---border-light: var(--wealthcx-gradient-200);
---border-medium-alt: var(--wealthcx-gradient-300);
---border-medium: var(--wealthcx-gradient-300);
---border-heavy: var(--wealthcx-gradient-400);
---border-xheavy: var(--wealthcx-gradient-500);
-/* These are test styles */
+  --presentation: var(--white);
+  --text-primary: var(--gray-800);
+  --text-secondary: var(--gray-600);
+  --text-secondary-alt: var(--gray-500);
+  --text-tertiary: var(--gray-500);
+  --ring-primary: var(--gray-500);
+  --header-primary: var(--white);
+  --header-hover: var(--gray-50);
+  --header-button-hover: var(--gray-50);
+  --surface-active: var(--gray-100);
+  --surface-active-alt: var(--gray-200);
+  --surface-hover: var(--gray-200);
+  --surface-hover-alt: var(--gray-300);
+  --surface-primary: var(--white);
+  --surface-primary-alt: var(--gray-50);
+  --surface-primary-contrast: var(--gray-100);
+  --surface-secondary: var(--gray-50);
+  --surface-secondary-alt: var(--gray-200);
+  --surface-tertiary: var(--gray-100);
+  --surface-tertiary-alt: var(--white);
+  --surface-dialog: var(--white);
+  --surface-submit: var(--green-700);
+  --surface-submit-hover: var(--green-800);
+  --surface-destructive: var(--red-700);
+  --surface-destructive-hover: var(--red-800);
+  --surface-chat: var(--white);
+  --border-light: var(--wealthcx-gradient-200);
+  --border-medium-alt: var(--wealthcx-gradient-300);
+  --border-medium: var(--wealthcx-gradient-300);
+  --border-heavy: var(--wealthcx-gradient-400);
+  --border-xheavy: var(--wealthcx-gradient-500);
+  /* These are test styles */
 
---background: 0 0% 100%;
---foreground: 0 0% 3.9%;
---card: 0 0% 100%;
---card-foreground: 0 0% 3.9%;
---primary: 0 0% 9%;
---primary-foreground: 0 0% 98%;
---secondary: 0 0% 96.1%;
---secondary-foreground: 0 0% 9%;
---muted: 0 0% 96.1%;
---muted-foreground: 0 0% 45.1%;
---accent: 0 0% 96.1%;
---accent-foreground: 0 0% 9%;
---destructive: 0 84.2% 60.2%;
---destructive-foreground: 0 0% 98%;
---border: var(--wealthcx-gradient);
---input: 0 0% 89.8%;
---ring: 0 0% 3.9%;
---radius: 0.5rem;
---chart-1: 12 76% 61%;
---chart-2: 173 58% 39%;
---chart-3: 197 37% 24%;
---chart-4: 43 74% 66%;
---chart-5: 27 87% 67%;
---switch-unchecked: 0 0% 58%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 3.9%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 96.1%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 96.1%;
+  --muted-foreground: 0 0% 45.1%;
+  --accent: 0 0% 96.1%;
+  --accent-foreground: 0 0% 9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: var(--wealthcx-gradient);
+  --input: 0 0% 89.8%;
+  --ring: 0 0% 3.9%;
+  --radius: 0.5rem;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --switch-unchecked: 0 0% 58%;
 }
 
 .dark {
---presentation: var(--gray-800);
---text-primary: var(--gray-100);
---text-secondary: var(--gray-300);
---text-secondary-alt: var(--gray-400);
---text-tertiary: var(--gray-500);
---header-primary: var(--gray-700);
---header-hover: var(--gray-600);
---header-button-hover: var(--gray-700);
---surface-active: var(--gray-500);
---surface-active-alt: var(--gray-700);
---surface-hover: var(--gray-600);
---surface-hover-alt: var(--gray-600);
---surface-primary: var(--gray-900);
---surface-primary-alt: var(--gray-850);
---surface-primary-contrast: var(--gray-850);
---surface-secondary: var(--gray-800);
---surface-secondary-alt: var(--gray-800);
---surface-tertiary: var(--gray-700);
---surface-tertiary-alt: var(--gray-700);
---surface-dialog: var(--gray-850);
---surface-submit: var(--green-700);
---surface-submit-hover: var(--green-800);
---surface-destructive: var(--red-800);
---surface-destructive-hover: var(--red-900);
---surface-chat: var(--gray-700);
---border-light: var(--wealthcx-gradient-700);
---border-medium-alt: var(--wealthcx-gradient-600);
---border-medium: var(--wealthcx-gradient-600);
---border-heavy: var(--wealthcx-gradient-500);
---border-xheavy: var(--wealthcx-gradient-400);
-/* These are test styles */
+  --presentation: var(--gray-800);
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-300);
+  --text-secondary-alt: var(--gray-400);
+  --text-tertiary: var(--gray-500);
+  --header-primary: var(--gray-700);
+  --header-hover: var(--gray-600);
+  --header-button-hover: var(--gray-700);
+  --surface-active: var(--gray-500);
+  --surface-active-alt: var(--gray-700);
+  --surface-hover: var(--gray-600);
+  --surface-hover-alt: var(--gray-600);
+  --surface-primary: var(--gray-900);
+  --surface-primary-alt: var(--gray-850);
+  --surface-primary-contrast: var(--gray-850);
+  --surface-secondary: var(--gray-800);
+  --surface-secondary-alt: var(--gray-800);
+  --surface-tertiary: var(--gray-700);
+  --surface-tertiary-alt: var(--gray-700);
+  --surface-dialog: var(--gray-850);
+  --surface-submit: var(--green-700);
+  --surface-submit-hover: var(--green-800);
+  --surface-destructive: var(--red-800);
+  --surface-destructive-hover: var(--red-900);
+  --surface-chat: var(--gray-700);
+  --border-light: var(--wealthcx-gradient-700);
+  --border-medium-alt: var(--wealthcx-gradient-600);
+  --border-medium: var(--wealthcx-gradient-600);
+  --border-heavy: var(--wealthcx-gradient-500);
+  --border-xheavy: var(--wealthcx-gradient-400);
+  /* These are test styles */
 
---background: 0 0% 7%;
---foreground: 0 0% 98%;
---card: 0 0% 3.9%;
---card-foreground: 0 0% 98%;
---primary: 0 0% 98%;
---primary-foreground: 0 0% 9%;
---secondary: 0 0% 14.9%;
---secondary-foreground: 0 0% 98%;
---muted: 0 0% 14.9%;
---muted-foreground: 0 0% 63.9%;
---accent: 0 0% 14.9%;
---accent-foreground: 0 0% 98%;
---destructive: 0 62.8% 40.6%;
---destructive-foreground: 0 0% 98%;
---border: var(--wealthcx-gradient);
---input: 0 0% 14.9%;
---ring: 0 0% 83.1%;
---chart-1: 220 70% 50%;
---chart-2: 160 60% 45%;
---chart-3: 30 80% 55%;
---chart-4: 280 65% 60%;
---chart-5: 340 75% 55%;
---switch-unchecked: 0 0% 40%;
+  --background: 0 0% 7%;
+  --foreground: 0 0% 98%;
+  --card: 0 0% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 0 0% 9%;
+  --secondary: 0 0% 14.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 14.9%;
+  --muted-foreground: 0 0% 63.9%;
+  --accent: 0 0% 14.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 40.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: var(--wealthcx-gradient);
+  --input: 0 0% 14.9%;
+  --ring: 0 0% 83.1%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+  --switch-unchecked: 0 0% 40%;
 }
 
 .gizmo {
---text-primary: var(--gizmo-gray-950);
---text-secondary: var(--gizmo-gray-600);
---text-tertiary: var(--gizmo-gray-500);
---surface-primary: var(--white);
---surface-secondary: var(--gray-50);
---surface-tertiary: var(--gray-100);
---border-light: rgba(0, 0, 0, 0.1);
---border-medium: rgba(0, 0, 0, 0.15);
---border-heavy: rgba(0, 0, 0, 0.2);
---border-xheavy: rgba(0, 0, 0, 0.25);
+  --text-primary: var(--gizmo-gray-950);
+  --text-secondary: var(--gizmo-gray-600);
+  --text-tertiary: var(--gizmo-gray-500);
+  --surface-primary: var(--white);
+  --surface-secondary: var(--gray-50);
+  --surface-tertiary: var(--gray-100);
+  --border-light: rgba(0, 0, 0, 0.1);
+  --border-medium: rgba(0, 0, 0, 0.15);
+  --border-heavy: rgba(0, 0, 0, 0.2);
+  --border-xheavy: rgba(0, 0, 0, 0.25);
 }
 
 .gizmo.dark {
---text-primary: var(--gray-100);
---text-secondary: var(--gray-300);
---text-tertiary: var(--gizmo-gray-500);
---surface-primary: var(--gray-900);
---surface-secondary: var(--gray-800);
---surface-tertiary: var(--gray-700);
---border-light: rgba(217, 217, 227, 0.1);
---border-medium: rgba(217, 217, 227, 0.15);
---border-heavy: rgba(217, 217, 227, 0.2);
---border-xheavy: rgba(217, 217, 227, 0.25);
+  --text-primary: var(--gray-100);
+  --text-secondary: var(--gray-300);
+  --text-tertiary: var(--gizmo-gray-500);
+  --surface-primary: var(--gray-900);
+  --surface-secondary: var(--gray-800);
+  --surface-tertiary: var(--gray-700);
+  --border-light: rgba(217, 217, 227, 0.1);
+  --border-medium: rgba(217, 217, 227, 0.15);
+  --border-heavy: rgba(217, 217, 227, 0.2);
+  --border-xheavy: rgba(217, 217, 227, 0.25);
+}
+
+/* Add sidebar styling with WealthCX gradient */
+.sidebar, 
+.nav-sidebar, 
+nav[role="navigation"], 
+aside, 
+.left-sidebar-container,
+[class*="sidebar"] {
+  background: var(--wealthcx-gradient);
+  color: white;
+}
+
+/* Style sidebar items for better visibility on gradient background */
+.sidebar a, 
+.sidebar button,
+.nav-sidebar a,
+.nav-sidebar button,
+nav[role="navigation"] a,
+nav[role="navigation"] button,
+aside a,
+aside button,
+.left-sidebar-container a,
+.left-sidebar-container button,
+[class*="sidebar"] a,
+[class*="sidebar"] button {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hover states for sidebar items */
+.sidebar a:hover, 
+.sidebar button:hover,
+.nav-sidebar a:hover,
+.nav-sidebar button:hover,
+nav[role="navigation"] a:hover,
+nav[role="navigation"] button:hover,
+aside a:hover,
+aside button:hover,
+.left-sidebar-container a:hover,
+.left-sidebar-container button:hover,
+[class*="sidebar"] a:hover,
+[class*="sidebar"] button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 0.375rem;
+}
+
+/* Style for the sidebar icons */
+.sidebar .icon-sm,
+.sidebar .icon-md,
+.nav-sidebar .icon-sm,
+.nav-sidebar .icon-md,
+nav[role="navigation"] .icon-sm,
+nav[role="navigation"] .icon-md,
+aside .icon-sm,
+aside .icon-md,
+.left-sidebar-container .icon-sm,
+.left-sidebar-container .icon-md,
+[class*="sidebar"] .icon-sm,
+[class*="sidebar"] .icon-md {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Improved styling for sidebar panels and cards */
+.sidebar .panel,
+.sidebar .card,
+.nav-sidebar .panel,
+.nav-sidebar .card,
+aside .panel,
+aside .card,
+.left-sidebar-container .panel,
+.left-sidebar-container .card,
+[class*="sidebar"] .panel,
+[class*="sidebar"] .card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+}
+
+/* Improved styling for sidebar headings */
+.sidebar h1, .sidebar h2, .sidebar h3, .sidebar h4, .sidebar h5, .sidebar h6,
+.nav-sidebar h1, .nav-sidebar h2, .nav-sidebar h3, .nav-sidebar h4, .nav-sidebar h5, .nav-sidebar h6,
+aside h1, aside h2, aside h3, aside h4, aside h5, aside h6,
+.left-sidebar-container h1, .left-sidebar-container h2, .left-sidebar-container h3, .left-sidebar-container h4, .left-sidebar-container h5, .left-sidebar-container h6,
+[class*="sidebar"] h1, [class*="sidebar"] h2, [class*="sidebar"] h3, [class*="sidebar"] h4, [class*="sidebar"] h5, [class*="sidebar"] h6 {
+  color: white;
+  font-weight: 600;
+}
+
+/* Improved styling for sidebar labels */
+.sidebar label,
+.nav-sidebar label,
+aside label,
+.left-sidebar-container label,
+[class*="sidebar"] label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* Improved styling for sidebar inputs */
+.sidebar input[type="text"],
+.sidebar input[type="search"],
+.sidebar input[type="email"],
+.sidebar input[type="password"],
+.sidebar input[type="number"],
+.sidebar textarea,
+.sidebar select,
+.sidebar .form-input,
+.nav-sidebar input[type="text"],
+.nav-sidebar input[type="search"],
+.nav-sidebar input[type="email"],
+.nav-sidebar input[type="password"],
+.nav-sidebar input[type="number"],
+.nav-sidebar textarea,
+.nav-sidebar select,
+.nav-sidebar .form-input,
+aside input[type="text"],
+aside input[type="search"],
+aside input[type="email"],
+aside input[type="password"],
+aside input[type="number"],
+aside textarea,
+aside select,
+aside .form-input,
+.left-sidebar-container input[type="text"],
+.left-sidebar-container input[type="search"],
+.left-sidebar-container input[type="email"],
+.left-sidebar-container input[type="password"],
+.left-sidebar-container input[type="number"],
+.left-sidebar-container textarea,
+.left-sidebar-container select,
+.left-sidebar-container .form-input,
+[class*="sidebar"] input[type="text"],
+[class*="sidebar"] input[type="search"],
+[class*="sidebar"] input[type="email"],
+[class*="sidebar"] input[type="password"],
+[class*="sidebar"] input[type="number"],
+[class*="sidebar"] textarea,
+[class*="sidebar"] select,
+[class*="sidebar"] .form-input {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar input[type="text"]:focus,
+.sidebar input[type="search"]:focus,
+.sidebar input[type="email"]:focus,
+.sidebar input[type="password"]:focus,
+.sidebar input[type="number"]:focus,
+.sidebar textarea:focus,
+.sidebar select:focus,
+.sidebar .form-input:focus,
+.nav-sidebar input[type="text"]:focus,
+.nav-sidebar input[type="search"]:focus,
+.nav-sidebar input[type="email"]:focus,
+.nav-sidebar input[type="password"]:focus,
+.nav-sidebar input[type="number"]:focus,
+.nav-sidebar textarea:focus,
+.nav-sidebar select:focus,
+.nav-sidebar .form-input:focus,
+aside input[type="text"]:focus,
+aside input[type="search"]:focus,
+aside input[type="email"]:focus,
+aside input[type="password"]:focus,
+aside input[type="number"]:focus,
+aside textarea:focus,
+aside select:focus,
+aside .form-input:focus,
+.left-sidebar-container input[type="text"]:focus,
+.left-sidebar-container input[type="search"]:focus,
+.left-sidebar-container input[type="email"]:focus,
+.left-sidebar-container input[type="password"]:focus,
+.left-sidebar-container input[type="number"]:focus,
+.left-sidebar-container textarea:focus,
+.left-sidebar-container select:focus,
+.left-sidebar-container .form-input:focus,
+[class*="sidebar"] input[type="text"]:focus,
+[class*="sidebar"] input[type="search"]:focus,
+[class*="sidebar"] input[type="email"]:focus,
+[class*="sidebar"] input[type="password"]:focus,
+[class*="sidebar"] input[type="number"]:focus,
+[class*="sidebar"] textarea:focus,
+[class*="sidebar"] select:focus,
+[class*="sidebar"] .form-input:focus {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.sidebar input[type="text"]::placeholder,
+.sidebar input[type="search"]::placeholder,
+.sidebar input[type="email"]::placeholder,
+.sidebar input[type="password"]::placeholder,
+.sidebar input[type="number"]::placeholder,
+.sidebar textarea::placeholder,
+.sidebar .form-input::placeholder,
+.nav-sidebar input[type="text"]::placeholder,
+.nav-sidebar input[type="search"]::placeholder,
+.nav-sidebar input[type="email"]::placeholder,
+.nav-sidebar input[type="password"]::placeholder,
+.nav-sidebar input[type="number"]::placeholder,
+.nav-sidebar textarea::placeholder,
+.nav-sidebar .form-input::placeholder,
+aside input[type="text"]::placeholder,
+aside input[type="search"]::placeholder,
+aside input[type="email"]::placeholder,
+aside input[type="password"]::placeholder,
+aside input[type="number"]::placeholder,
+aside textarea::placeholder,
+aside .form-input::placeholder,
+.left-sidebar-container input[type="text"]::placeholder,
+.left-sidebar-container input[type="search"]::placeholder,
+.left-sidebar-container input[type="email"]::placeholder,
+.left-sidebar-container input[type="password"]::placeholder,
+.left-sidebar-container input[type="number"]::placeholder,
+.left-sidebar-container textarea::placeholder,
+.left-sidebar-container .form-input::placeholder,
+[class*="sidebar"] input[type="text"]::placeholder,
+[class*="sidebar"] input[type="search"]::placeholder,
+[class*="sidebar"] input[type="email"]::placeholder,
+[class*="sidebar"] input[type="password"]::placeholder,
+[class*="sidebar"] input[type="number"]::placeholder,
+[class*="sidebar"] textarea::placeholder,
+[class*="sidebar"] .form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Improved styling for sidebar buttons */
+.sidebar .btn,
+.sidebar button[type="button"],
+.sidebar button[type="submit"],
+.nav-sidebar .btn,
+.nav-sidebar button[type="button"],
+.nav-sidebar button[type="submit"],
+aside .btn,
+aside button[type="button"],
+aside button[type="submit"],
+.left-sidebar-container .btn,
+.left-sidebar-container button[type="button"],
+.left-sidebar-container button[type="submit"],
+[class*="sidebar"] .btn,
+[class*="sidebar"] button[type="button"],
+[class*="sidebar"] button[type="submit"] {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar .btn:hover,
+.sidebar button[type="button"]:hover,
+.sidebar button[type="submit"]:hover,
+.nav-sidebar .btn:hover,
+.nav-sidebar button[type="button"]:hover,
+.nav-sidebar button[type="submit"]:hover,
+aside .btn:hover,
+aside button[type="button"]:hover,
+aside button[type="submit"]:hover,
+.left-sidebar-container .btn:hover,
+.left-sidebar-container button[type="button"]:hover,
+.left-sidebar-container button[type="submit"]:hover,
+[class*="sidebar"] .btn:hover,
+[class*="sidebar"] button[type="button"]:hover,
+[class*="sidebar"] button[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar .btn:active,
+.sidebar button[type="button"]:active,
+.sidebar button[type="submit"]:active,
+.nav-sidebar .btn:active,
+.nav-sidebar button[type="button"]:active,
+.nav-sidebar button[type="submit"]:active,
+aside .btn:active,
+aside button[type="button"]:active,
+aside button[type="submit"]:active,
+.left-sidebar-container .btn:active,
+.left-sidebar-container button[type="button"]:active,
+.left-sidebar-container button[type="submit"]:active,
+[class*="sidebar"] .btn:active,
+[class*="sidebar"] button[type="button"]:active,
+[class*="sidebar"] button[type="submit"]:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Improved styling for sidebar primary buttons */
+.sidebar .btn-primary,
+.nav-sidebar .btn-primary,
+aside .btn-primary,
+.left-sidebar-container .btn-primary,
+[class*="sidebar"] .btn-primary {
+  background-color: white;
+  color: #8A4FFF; /* Average of the gradient colors */
+  border: none;
+  font-weight: 600;
+}
+
+.sidebar .btn-primary:hover,
+.nav-sidebar .btn-primary:hover,
+aside .btn-primary:hover,
+.left-sidebar-container .btn-primary:hover,
+[class*="sidebar"] .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #7A3FEF;
+}
+
+/* Improved styling for sidebar secondary buttons */
+.sidebar .btn-secondary,
+.nav-sidebar .btn-secondary,
+aside .btn-secondary,
+.left-sidebar-container .btn-secondary,
+[class*="sidebar"] .btn-secondary {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.sidebar .btn-secondary:hover,
+.nav-sidebar .btn-secondary:hover,
+aside .btn-secondary:hover,
+.left-sidebar-container .btn-secondary:hover,
+[class*="sidebar"] .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Improved styling for sidebar sliders and range inputs */
+.sidebar input[type="range"],
+.nav-sidebar input[type="range"],
+aside input[type="range"],
+.left-sidebar-container input[type="range"],
+[class*="sidebar"] input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  outline: none;
+}
+
+.sidebar input[type="range"]::-webkit-slider-thumb,
+.nav-sidebar input[type="range"]::-webkit-slider-thumb,
+aside input[type="range"]::-webkit-slider-thumb,
+.left-sidebar-container input[type="range"]::-webkit-slider-thumb,
+[class*="sidebar"] input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar input[type="range"]::-moz-range-thumb,
+.nav-sidebar input[type="range"]::-moz-range-thumb,
+aside input[type="range"]::-moz-range-thumb,
+.left-sidebar-container input[type="range"]::-moz-range-thumb,
+[class*="sidebar"] input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved styling for sidebar checkboxes and radio buttons */
+.sidebar input[type="checkbox"],
+.sidebar input[type="radio"],
+.nav-sidebar input[type="checkbox"],
+.nav-sidebar input[type="radio"],
+aside input[type="checkbox"],
+aside input[type="radio"],
+.left-sidebar-container input[type="checkbox"],
+.left-sidebar-container input[type="radio"],
+[class*="sidebar"] input[type="checkbox"],
+[class*="sidebar"] input[type="radio"] {
+  accent-color: white;
+}
+
+/* Improved styling for sidebar toggle switches */
+.sidebar .toggle-switch,
+.nav-sidebar .toggle-switch,
+aside .toggle-switch,
+.left-sidebar-container .toggle-switch,
+[class*="sidebar"] .toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.sidebar .toggle-switch input,
+.nav-sidebar .toggle-switch input,
+aside .toggle-switch input,
+.left-sidebar-container .toggle-switch input,
+[class*="sidebar"] .toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.sidebar .toggle-slider,
+.nav-sidebar .toggle-slider,
+aside .toggle-slider,
+.left-sidebar-container .toggle-slider,
+[class*="sidebar"] .toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.sidebar .toggle-slider:before,
+.nav-sidebar .toggle-slider:before,
+aside .toggle-slider:before,
+.left-sidebar-container .toggle-slider:before,
+[class*="sidebar"] .toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.sidebar input:checked + .toggle-slider,
+.nav-sidebar input:checked + .toggle-slider,
+aside input:checked + .toggle-slider,
+.left-sidebar-container input:checked + .toggle-slider,
+[class*="sidebar"] input:checked + .toggle-slider {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar input:checked + .toggle-slider:before,
+.nav-sidebar input:checked + .toggle-slider:before,
+aside input:checked + .toggle-slider:before,
+.left-sidebar-container input:checked + .toggle-slider:before,
+[class*="sidebar"] input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Improved styling for sidebar tables */
+.sidebar table,
+.nav-sidebar table,
+aside table,
+.left-sidebar-container table,
+[class*="sidebar"] table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: white;
+}
+
+.sidebar table th,
+.nav-sidebar table th,
+aside table th,
+.left-sidebar-container table th,
+[class*="sidebar"] table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar table td,
+.nav-sidebar table td,
+aside table td,
+.left-sidebar-container table td,
+[class*="sidebar"] table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Improved styling for sidebar dividers */
+.sidebar hr,
+.nav-sidebar hr,
+aside hr,
+.left-sidebar-container hr,
+[class*="sidebar"] hr {
+  border: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 0.75rem 0;
+}
+
+/* Improved styling for sidebar badges */
+.sidebar .badge,
+.nav-sidebar .badge,
+aside .badge,
+.left-sidebar-container .badge,
+[class*="sidebar"] .badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 9999px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Improved styling for active items in sidebar */
+.sidebar .active,
+.nav-sidebar .active,
+aside .active,
+.left-sidebar-container .active,
+[class*="sidebar"] .active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+/* Improved styling for sidebar sections */
+.sidebar .section,
+.nav-sidebar .section,
+aside .section,
+.left-sidebar-container .section,
+[class*="sidebar"] .section {
+  margin-bottom: 1rem;
+}
+
+.sidebar .section-title,
+.nav-sidebar .section-title,
+aside .section-title,
+.left-sidebar-container .section-title,
+[class*="sidebar"] .section-title {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Popup menu styling */
 .popover-ui {
-display: flex;
-max-height: min(var(--popover-available-height, 1700px), 1700px);
-flex-direction: column;
-overflow: auto;
-overscroll-behavior: contain;
-border-radius: 1rem;
-border-width: 1px;
-border-style: solid;
-border-color: var(--border-light);
-background-color: var(--surface-primary);
-padding: 0.5rem;
-color: var(--text-primary);
-box-shadow:
-  0 10px 15px -3px rgb(0 0 0 / 0.1),
-  0 4px 6px -4px rgb(0 0 0 / 0.1);
-transform-origin: top;
-opacity: 0;
-transition-property: opacity, scale, translate;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-duration: 150ms;
-scale: 0.95;
-translate: 0 -0.5rem;
-margin-top: 4px;
-margin-right: -2px;
+  display: flex;
+  max-height: min(var(--popover-available-height, 1700px), 1700px);
+  flex-direction: column;
+  overflow: auto;
+  overscroll-behavior: contain;
+  border-radius: 1rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-light);
+  background-color: var(--surface-primary);
+  padding: 0.5rem;
+  color: var(--text-primary);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform-origin: top;
+  opacity: 0;
+  transition-property: opacity, scale, translate;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  scale: 0.95;
+  translate: 0 -0.5rem;
+  margin-top: 4px;
+  margin-right: -2px;
 }
 
 .popover-ui:focus-visible,
 .popover-ui[data-focus-visible] {
-outline: var(--bg-surface-hover);
-outline-offset: -1px;
+  outline: var(--bg-surface-hover);
+  outline-offset: -1px;
 }
 
 .popover-ui:where(.dark, .dark *) {
-background-color: var(--surface-secondary);
-color: var(--text-secondary);
-box-shadow:
-  0 10px 15px -3px rgb(0 0 0 / 0.25),
-  0 4px 6px -4px rgb(0 0 0 / 0.1);
+  background-color: var(--surface-secondary);
+  color: var(--text-secondary);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.25),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .popover-ui[data-enter] {
-opacity: 1;
-scale: 1;
-translate: 0;
+  opacity: 1;
+  scale: 1;
+  translate: 0;
 }
 
 /* Dropdown menu styling */
 .dropdown-menu {
-position: absolute;
-z-index: 50;
-min-width: 8rem;
-overflow: hidden;
-border-radius: 0.5rem;
-border: 1px solid var(--border-light);
-background-color: var(--surface-primary);
-padding: 0.5rem;
-color: var(--text-primary);
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 50;
+  min-width: 8rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--surface-primary);
+  padding: 0.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 .dark .dropdown-menu {
-background-color: var(--surface-secondary);
-border-color: var(--border-medium);
-color: var(--text-secondary);
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface-secondary);
+  border-color: var(--border-medium);
+  color: var(--text-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu item styling */
 .select-item {
-display: flex;
-cursor: pointer;
-scroll-margin: 0.5rem;
-align-items: center;
-gap: 0.5rem;
-border-radius: 0.5rem;
-padding: 0.5rem;
-outline: none !important;
+  display: flex;
+  cursor: pointer;
+  scroll-margin: 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  outline: none !important;
 }
 
 .select-item[aria-disabled='true'] {
-opacity: 0.5;
+  opacity: 0.5;
 }
 
 .select-item[data-active-item] {
-background-color: var(--surface-hover);
-color: var(--text-primary);
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
 }
 
 /* Animation for popovers */
 .animate-popover {
-transform-origin: top;
-opacity: 0;
-transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-transform: scale(0.95) translateY(-0.5rem);
+  transform-origin: top;
+  opacity: 0;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.95) translateY(-0.5rem);
 }
 
 .animate-popover[data-enter] {
-opacity: 1;
-transform: scale(1) translateY(0);
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }
 
 .animate-popover-left {
-transform-origin: left;
-opacity: 0;
-transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
-transform: scale(0.95) translateX(-0.5rem);
+  transform-origin: left;
+  opacity: 0;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0.95) translateX(-0.5rem);
 }
 
 .animate-popover-left[data-enter] {
-opacity: 1;
-transform: scale(1) translateX(0);
+  opacity: 1;
+  transform: scale(1) translateX(0);
 }
 
 /* General menu styling for user dropdown */
 .user-dropdown-menu {
-position: absolute;
-z-index: 50;
-min-width: 200px;
-overflow: hidden;
-border-radius: 0.5rem;
-border: 1px solid var(--border-light);
-background-color: var(--surface-primary);
-padding: 0.5rem;
-color: var(--text-primary);
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 50;
+  min-width: 200px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--surface-primary);
+  padding: 0.5rem;
+  color: var(--text-primary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 .dark .user-dropdown-menu {
-background-color: var(--surface-secondary);
-border-color: var(--border-medium);
-color: var(--text-secondary);
-box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  background-color: var(--surface-secondary);
+  border-color: var(--border-medium);
+  color: var(--text-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
 }
 
 .user-dropdown-menu hr {
-margin: 0.5rem 0;
-border-color: var(--border-light);
+  margin: 0.5rem 0;
+  border-color: var(--border-light);
 }
 
 .user-dropdown-menu a,
 .user-dropdown-menu button {
-display: flex;
-width: 100%;
-align-items: center;
-padding: 0.5rem;
-border-radius: 0.25rem;
-color: var(--text-primary);
-text-decoration: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  color: var(--text-primary);
+  text-decoration: none;
 }
 
 .dark .user-dropdown-menu a,
 .dark .user-dropdown-menu button {
-color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
 .user-dropdown-menu a:hover,
 .user-dropdown-menu button:hover {
-background-color: var(--surface-hover);
+  background-color: var(--surface-hover);
 }
 
 .user-dropdown-menu a svg,
 .user-dropdown-menu button svg {
-margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
-/* SUPER AGGRESSIVE SIDEBAR TARGETING */
-/* This section uses extremely specific and aggressive selectors to target the sidebar */
-
-/* Target the exact sidebar from your screenshot */
-[class*="bg-token-sidebar-surface-primary"],
-[class*="bg-black"],
-[class*="bg-gray-900"],
-[class*="bg-neutral-900"],
-[class*="dark:bg-gray-900"],
-[class*="dark:bg-black"],
-[class*="dark:bg-neutral-900"],
-.dark .bg-black,
-.dark .bg-gray-900,
-.dark .bg-neutral-900,
-.bg-black,
-.bg-gray-900,
-.bg-neutral-900,
-.dark\:bg-black,
-.dark\:bg-gray-900,
-.dark\:bg-neutral-900 {
-  background: var(--wealthcx-gradient) !important;
-}
-
-/* Target by width and position */
-.w-\[260px\],
-.w-\[280px\],
-.w-\[300px\],
-.w-56,
-.w-60,
-.w-64,
-.fixed.inset-y-0.left-0,
-.absolute.inset-y-0.left-0,
-.relative.inset-y-0.left-0 {
-  background: var(--wealthcx-gradient) !important;
-}
-
-/* Target by content */
-div:has(> button:has(> span:contains("New chat"))),
-div:has(> a:has(> span:contains("New chat"))),
-div:has(> div:has(> span:contains("New chat"))),
-div:has(> input[placeholder="Search messages"]),
-div:has(> div:has(> span:contains("Bookmarks"))) {
-  background: var(--wealthcx-gradient) !important;
-}
-
-/* Target by structure */
-body > div > div > div:first-child,
-body > div:first-child > div:first-child > div:first-child,
-body > div:first-child > div:first-child > div:first-child > div:first-child {
-  background: var(--wealthcx-gradient) !important;
-}
-
-/* Target by role */
-nav[role="navigation"],
-aside:first-child,
-.sidebar:first-child,
-.left-sidebar,
-.chat-sidebar,
-.chat-history,
-.conversation-sidebar,
-.conversation-list,
-.chat-list,
-.chat-nav,
-.conversations-sidebar-container,
-.conversations-sidebar,
-.conversations-list,
-.chat-conversations-list,
-.chat-history-container {
-  background: var(--wealthcx-gradient) !important;
-}
-
-/* Target by class patterns */
-.flex-shrink-0:first-child,
-.flex-col.h-full:first-child,
-.h-full.flex-col:first-child,
-.flex.flex-col.h-full:first-child,
-.flex.h-full.flex-col:first-child,
-.flex-col.h-full.w-full:first-child,
-.h-full.flex-col.w-full:first-child,
-.flex.flex-col.h-full.w-full:first-child,
-.flex.h-full.flex-col.w-full:first-child {
-  background: var(--wealthcx-gradient) !important;
-}
-
-/* Target by direct DOM path */
-body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1),
-body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1),
-body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
-  background: var(--wealthcx-gradient) !important;
-}
-
-/* Style text and elements in the sidebar */
-[class*="bg-token-sidebar-surface-primary"] *,
-[class*="bg-black"] *,
-[class*="bg-gray-900"] *,
-[class*="bg-neutral-900"] *,
-[class*="dark:bg-gray-900"] *,
-[class*="dark:bg-black"] *,
-[class*="dark:bg-neutral-900"] *,
-.dark .bg-black *,
-.dark .bg-gray-900 *,
-.dark .bg-neutral-900 *,
-.bg-black *,
-.bg-gray-900 *,
-.bg-neutral-900 *,
-.dark\:bg-black *,
-.dark\:bg-gray-900 *,
-.dark\:bg-neutral-900 *,
-.w-\[260px\] *,
-.w-\[280px\] *,
-.w-\[300px\] *,
-.w-56 *,
-.w-60 *,
-.w-64 *,
-.fixed.inset-y-0.left-0 *,
-.absolute.inset-y-0.left-0 *,
-.relative.inset-y-0.left-0 *,
-body > div > div > div:first-child *,
-body > div:first-child > div:first-child > div:first-child *,
-body > div:first-child > div:first-child > div:first-child > div:first-child *,
-nav[role="navigation"] *,
-aside:first-child *,
-.sidebar:first-child *,
-.left-sidebar *,
-.chat-sidebar *,
-.chat-history *,
-.conversation-sidebar *,
-.conversation-list *,
-.chat-list *,
-.chat-nav *,
-.conversations-sidebar-container *,
-.conversations-sidebar *,
-.conversations-list *,
-.chat-conversations-list *,
-.chat-history-container * {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-/* Style the search box */
-input[placeholder="Search messages"] {
-  background-color: rgba(255, 255, 255, 0.15) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  border-radius: 0.375rem !important;
-  color: white !important;
-}
-
-/* Style the search box placeholder */
-input[placeholder="Search messages"]::placeholder {
-  color: rgba(255, 255, 255, 0.6) !important;
-}
-
-/* DIRECT TARGETING OF THE EXACT SIDEBAR ELEMENT */
-/* These are extremely specific selectors based on your screenshot */
-.dark.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
-.flex-shrink-0.overflow-x-hidden.bg-token-sidebar-surface-primary,
-.dark.flex-shrink-0.overflow-x-hidden,
-.flex-shrink-0.overflow-x-hidden,
-.dark.flex-shrink-0,
-.flex-shrink-0 {
-  background: var(--wealthcx-gradient) !important;
-  color: white !important;
-}
-
-/* PRESERVE MODEL DROPDOWN STYLING */
-/* Based on the screenshot, ensure the model dropdown isn't affected */
-.dropdown-menu,
-div[role="dialog"],
-div[role="listbox"],
-div[role="menu"],
-div[role="combobox"],
-div[aria-haspopup="listbox"],
-div[aria-haspopup="menu"],
-div[aria-haspopup="dialog"] {
-  background-color: #202123 !important;
-  color: white !important;
-}
-
-/* PRESERVE MODEL DROPDOWN ITEM STYLING */
-.dropdown-menu *,
-div[role="dialog"] *,
-div[role="listbox"] *,
-div[role="menu"] *,
-div[role="combobox"] *,
-div[aria-haspopup="listbox"] *,
-div[aria-haspopup="menu"] *,
-div[aria-haspopup="dialog"] * {
-  color: inherit !important;
-}
-
-/* ENSURE MAIN CONTENT AREA REMAINS UNTOUCHED */
-/* This targets the main content area (green box in screenshot) */
-main,
-.main-content,
-.chat-content,
-div.relative.h-full.w-full.flex-1,
-div.flex-1.overflow-hidden,
-div:has(> div:has(> div:has(> textarea[placeholder="Message GPT-4"]))),
-div:has(> div:has(> div:has(> div:has(> textarea)))) {
-  background: none !important;
-}
-
-/* EXTREMELY SPECIFIC TARGETING FOR CHATGPT SIDEBAR */
-/* These selectors are based on common ChatGPT class patterns */
-.dark nav.flex-shrink-0,
-nav.flex-shrink-0,
-.dark aside.flex-shrink-0,
-aside.flex-shrink-0,
-.dark .sidebar-wrapper,
-.sidebar-wrapper,
-.dark .nav-sidebar,
-.nav-sidebar,
-.dark .conversation-sidebar,
-.conversation-sidebar,
-/* Target the exact element with the "New chat" button */
-div:has(> div:has(> button:has(> div:has(> span:contains("New chat"))))),
-/* Target the element with the search box */
-div:has(> div:has(> input[placeholder="Search messages"])),
-/* Target the element with the bookmarks */
-div:has(> div:has(> div:has(> span:contains("Bookmarks")))),
-/* Target the element with the conversation history */
-div:has(> div:has(> div:has(> div:has(> span:contains("Today"))))),
-/* Target the element with the user avatar at bottom */
-div:has(> div.absolute.bottom-0) {
-  background: var(--wealthcx-gradient) !important;
-  color: white !important;
-}
-
-/* DIRECT TARGETING BY ELEMENT POSITION */
-/* Target the first column in a multi-column layout */
-body > div > div > div:nth-child(1):not(:only-child),
-body > div > div:nth-child(1) > div:nth-child(1):not(:only-child),
-body > div:nth-child(1) > div:nth-child(1) > div:nth-child(1):not(:only-child) {
-  background: var(--wealthcx-gradient) !important;
-  color: white !important;
-}
-
-/* DIRECT TARGETING BY ELEMENT ATTRIBUTES */
-/* Target elements with specific attributes that are likely to be the sidebar */
-[aria-label="Chat history"],
-[aria-label="Sidebar"],
-[aria-label="Navigation"],
-[data-testid="sidebar"],
-[data-testid="chat-sidebar"],
-[data-testid="conversation-sidebar"] {
-  background: var(--wealthcx-gradient) !important;
-  color: white !important;
-}
-
-/* DIRECT TARGETING BY ELEMENT CONTENT */
-/* Target elements that contain specific content that's likely to be in the sidebar */
-div:has(> span:contains("New chat")),
-div:has(> button:contains("New chat")),
-div:has(> a:contains("New chat")),
-div:has(> input[placeholder*="Search"]),
-div:has(> div:contains("Bookmarks")),
-div:has(> div:contains("Today")),
-div:has(> div:contains("Yesterday")) {
-  background: var(--wealthcx-gradient) !important;
-  color: white !important;
-}
+/* Rest of the CSS remains the same */
