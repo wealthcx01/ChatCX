@@ -9,7 +9,8 @@
   --wealthcx-red: #ff0645;
   --wealthcx-green: #45e48f;
   --wealthcx-yellow: #ffd000;
-  --wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF);
+  --core-brand: #8E68FA; /* Core brand color */
+  --wealthcx-gradient: linear-gradient(90deg, #BF63FF, #473CFF); /* WealthCX gradient */
   --gray-20: #ececf1;
   --gray-50: #f7f7f8;
   --gray-100: #ececec;
@@ -2038,7 +2039,6 @@ html {
     transform: translateX(20%);
   }
   85%,
-  ```css
   100% {
     opacity: 0;
     transform: translateX(30%);
@@ -2435,4 +2435,3 @@ html {
   border-width: 2px;
   border-style: solid;
 }
-```
