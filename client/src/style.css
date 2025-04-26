@@ -1325,7 +1325,7 @@ button {
   opacity: 0.5;
 }
 .btn-primary {
-  background-color: var(--core-brand); /* Use core brand color */
+  background-color: var(--core-brand); /* Core brand color */
   color: var(--white);
 }
 
@@ -2035,7 +2035,7 @@ html {
     transform: translateX(10%);
   }
   80% {
-    opacity: 0;
+    opacity:0;
     transform: translateX(20%);
   }
   85%,
@@ -2269,7 +2269,7 @@ html {
   color: var(--text-primary);
   box-shadow:
     0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+    0 4px 6px -4px rgb(0, 0, 0, 0.1);
   transform-origin: top;
   opacity: 0;
   transition-property: opacity, scale, translate;
@@ -2434,4 +2434,18 @@ html {
   border-image: var(--wealthcx-gradient) 1;
   border-width: 2px;
   border-style: solid;
+}
+
+/* Ensure Proper Compilation */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: var(--surface-primary);
+}
+
+.dark body,
+.dark html {
+  background-color: var(--black); /* Ensure dark mode uses black */
 }
