@@ -1,0 +1,9 @@
+- name: N8NPipe
+  description: Connects LibreChat to n8n Orchestration workflows for custom agent logic.
+  class_name: N8NPipe
+  module: extensions.n8n_pipe.n8n-pipe
+  args:
+    n8n_url: "https://primary-production-ed85.up.railway.app/webhook-test/invoke-n8n-chatcx-agent"
+    n8n_bearer_token: ""
+    input_field: "question"
+    response_field: "result"
