@@ -67,7 +67,7 @@ bower_components/
 .flooignore
 
 #config file
-librechat.yaml
+# librechat.yaml - commented out to allow Railway deployment
 librechat.yml
 
 # Environment
