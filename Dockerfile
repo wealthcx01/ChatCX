@@ -38,6 +38,9 @@ RUN \
 
 COPY --chown=node:node . .
 
+# Ensure librechat.yaml is explicitly copied for Railway deployment
+COPY --chown=node:node librechat.yaml /app/librechat.yaml
+
 RUN \
     # React client build
     NODE_OPTIONS="--max-old-space-size=2048" npm run frontend; \
