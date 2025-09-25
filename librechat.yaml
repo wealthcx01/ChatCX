@@ -195,8 +195,6 @@ mcpServers:
   my-custom-mcp:
     type: sse
     url: https://my-mcp-server.john-gallagher.workers.dev/sse
-    timeout: 30000
-    serverInstructions: true
     startup: true
 
 # Definition of custom endpoints
