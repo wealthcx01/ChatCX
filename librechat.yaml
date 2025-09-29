@@ -203,7 +203,8 @@ mcpServers:
     oauth:
       authorization_url: "https://my-mcp-server.john-gallagher.workers.dev/authorize"
       token_url: "https://my-mcp-server.john-gallagher.workers.dev/token"
-      client_id: "chatcx-static-client-id-01"
+      client_id: "1BJElXzII2PEJtDf"
+      client_secret: "8fa3480d4523e8cf64e013e74a1cb0ee2aeaef771449b4c6683c82790d61146e"
       redirect_uri: "https://www.chatcx.wealthcx.com/api/mcp/my-custom-mcp/oauth/callback"
       scope: "read:user"
       grant_types_supported: ["authorization_code", "refresh_token"]
