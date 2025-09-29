@@ -196,16 +196,13 @@ mcpServers:
     type: sse
     url: https://my-mcp-server.john-gallagher.workers.dev/sse
     headers:
-      Authorization: "Bearer {{API_TOKEN}}"
+      # This tells LibreChat to use the environment variable RKD_MCP_SERVER_API_TOKEN as the bearer token.
+      Authorization: "Bearer ${RKD_MCP_SERVER_API_TOKEN}"
       X-User-ID: "{{LIBRECHAT_USER_ID}}"
     startup: true
     initTimeout: 150000
     timeout: 30000
     serverInstructions: true
-    customUserVars:
-      API_TOKEN:
-        title: "MCP Server API Token"
-        description: "Enter the API Token provided by the MCP Server administrator."
 
 # Definition of custom endpoints
 endpoints:
