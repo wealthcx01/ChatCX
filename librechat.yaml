@@ -195,8 +195,22 @@ mcpServers:
   my-custom-mcp:
     type: sse
     url: https://my-mcp-server.john-gallagher.workers.dev/sse
+    requiresOAuth: true
+    headers:
+      X-User-ID: "{{LIBRECHAT_USER_ID}}"
     initTimeout: 150000
     timeout: 30000
+    oauth:
+      authorization_url: "https://my-mcp-server.john-gallagher.workers.dev/authorize"
+      token_url: "https://my-mcp-server.john-gallagher.workers.dev/token"
+      client_id: "1BJElXzII2PEJtDf"
+      client_secret: "8fa3480d4523e8cf64e013e74a1cb0ee2aeaef771449b4c6683c82790d61146e"
+      redirect_uri: "https://www.chatcx.wealthcx.com/api/mcp/my-custom-mcp/oauth/callback"
+      scope: "read:user"
+      grant_types_supported: ["authorization_code", "refresh_token"]
+      token_endpoint_auth_methods_supported: ["client_secret_basic", "client_secret_post"]
+      response_types_supported: ["code"]
+      code_challenge_methods_supported: ["S256", "plain"]
 
 # Definition of custom endpoints
 endpoints:
