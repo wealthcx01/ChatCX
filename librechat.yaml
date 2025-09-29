@@ -195,13 +195,8 @@ mcpServers:
   my-custom-mcp:
     type: sse
     url: https://my-mcp-server.john-gallagher.workers.dev/sse
-    headers:
-      X-User-ID: "{{LIBRECHAT_USER_ID}}"
-      Authorization: "Bearer ${RKD_MCP_SERVER_API_TOKEN}"
-    startup: true
     initTimeout: 150000
     timeout: 30000
-    serverInstructions: true
 
 # Definition of custom endpoints
 endpoints:
