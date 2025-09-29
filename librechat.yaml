@@ -1,7 +1,7 @@
 # For more information, see the Configuration Guide:
 # https://www.librechat.ai/docs/configuration/librechat_yaml
 
-# Configuration version (required )
+# Configuration version (required  )
 version: 1.2.9
 
 # Cache settings: Set to true to enable caching
@@ -48,7 +48,7 @@ interface:
 
       *Effective Date: February 18, 2024*
 
-      Welcome to LibreChat, the informational website for the open-source AI chat platform, available at https://librechat.ai. These Terms of Service ("Terms" ) govern your use of our website and the services we offer. By accessing or using the Website, you agree to be bound by these Terms and our Privacy Policy, accessible at https://librechat.ai//privacy.
+      Welcome to LibreChat, the informational website for the open-source AI chat platform, available at https://librechat.ai. These Terms of Service ("Terms"  ) govern your use of our website and the services we offer. By accessing or using the Website, you agree to be bound by these Terms and our Privacy Policy, accessible at https://librechat.ai//privacy.
 
       ## 1. Ownership
 
@@ -76,7 +76,7 @@ interface:
 
       ## 7. Contact Information
 
-      If you have any questions about these Terms, please contact us at contact@librechat.ai.
+      if you have any questions about these Terms, please contact us at contact@librechat.ai.
 
       By using the Website, you acknowledge that you have read these Terms of Service and agree to be bound by them.
 
@@ -96,7 +96,7 @@ interface:
   marketplace:
       use: false
   fileCitations: true
-  # Temporary chat retention period in hours (default: 720, min: 1, max: 8760 )
+  # Temporary chat retention period in hours (default: 720, min: 1, max: 8760  )
   # temporaryChatRetention: 1
 
 # Example Cloudflare turnstile (optional)
@@ -196,18 +196,14 @@ mcpServers:
     type: sse
     url: https://my-mcp-server.john-gallagher.workers.dev/sse
     headers:
+      # This uses the secret from the pre-registered client as a Bearer Token
+      Authorization: "Bearer z9pL8vK3jR7sW5mN2qX6bC4gA1fE0hD9"
       X-User-ID: "{{LIBRECHAT_USER_ID}}"
     startup: true
     initTimeout: 150000
     timeout: 30000
     serverInstructions: true
-    # --- START: ADDED THIS BLOCK TO FIX OAUTH ---
-    oauth:
-      client_id: "ezefD5hd57ME1eL8"
-      authorization_url: "https://my-mcp-server.john-gallagher.workers.dev/authorize"
-      token_url: "https://my-mcp-server.john-gallagher.workers.dev/token"
-      callback_url: "https://www.chatcx.wealthcx.com/api/mcp/my-custom-mcp/oauth/callback"
-    # --- END: ADDED THIS BLOCK TO FIX OAUTH ---
+    # The "requiresOAuth" and "oauth" blocks have been removed to enable simple Bearer Token authentication
 
 # Definition of custom endpoints
 endpoints:
@@ -218,7 +214,7 @@ endpoints:
   #   # Should only be one or the other, either `supportedIds` or `excludedIds`
   #   supportedIds: ["asst_supportedAssistantId1", "asst_supportedAssistantId2"]
   #   # excludedIds: ["asst_excludedAssistantId"]
-  #   # Only show assistants that the user created or that were created externally (e.g. in Assistants playground ).
+  #   # Only show assistants that the user created or that were created externally (e.g. in Assistants playground  ).
   #   # privateAssistants: false # Does not work with `supportedIds` or `excludedIds`
   #   # (optional) Models that support retrieval, will default to latest known OpenAI models that support the feature
   #   retrievalModels: ["gpt-4-turbo-preview"]
@@ -361,18 +357,18 @@ endpoints:
 #     px: 1024
 #   # Client-side image resizing to prevent upload errors
 #   clientImageResize:
-#     enabled: false  # Enable/disable client-side image resizing (default: false )
+#     enabled: false  # Enable/disable client-side image resizing (default: false  )
 #     maxWidth: 1900  # Maximum width for resized images (default: 1900)
 #     maxHeight: 1900  # Maximum height for resized images (default: 1900)
 #     quality: 0.92  # JPEG quality for compression (0.0-1.0, default: 0.92)
 # # See the Custom Configuration Guide for more information on Assistants Config:
 # # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
 
-# Web Search Configuration (optional )
+# Web Search Configuration (optional  )
 # webSearch:
 #   # Jina Reranking Configuration
 #   jinaApiKey: '${JINA_API_KEY}'  # Your Jina API key
-#   jinaApiUrl: '${JINA_API_URL}'  # Custom Jina API URL (optional, defaults to https://api.jina.ai/v1/rerank )
+#   jinaApiUrl: '${JINA_API_URL}'  # Custom Jina API URL (optional, defaults to https://api.jina.ai/v1/rerank  )
 #   
 #   # Other rerankers
 #   cohereApiKey: '${COHERE_API_KEY}'
