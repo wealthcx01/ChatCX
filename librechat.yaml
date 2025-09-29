@@ -197,15 +197,11 @@ mcpServers:
     url: https://my-mcp-server.john-gallagher.workers.dev/sse
     headers:
       X-User-ID: "{{LIBRECHAT_USER_ID}}"
-      Authorization: "Bearer {{API_TOKEN}}"
-    startup: false
+      Authorization: "Bearer ${RKD_MCP_SERVER_API_TOKEN}"
+    startup: true
     initTimeout: 150000
     timeout: 30000
     serverInstructions: true
-    customUserVars:
-      API_TOKEN:
-        title: "MCP Server API Token"
-        description: "Enter your GitHub App client secret: e53381a67d5128b36fc8833e3b36940ebb8e50be"
 
 # Definition of custom endpoints
 endpoints:
